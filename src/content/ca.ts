@@ -41,6 +41,7 @@ const ca: SiteContent = {
     participateLabel: 'Formar-ne part',
   },
   hero: {
+    eyebrow: 'UNA MANERA DE VIURE, APRENDRE I COMPARTIR',
     title: 'PAIDEIA',
     subtitle: 'Una comunitat per aprendre a viure.',
     description:
