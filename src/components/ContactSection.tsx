@@ -35,6 +35,7 @@ export default function ContactSection({ content }: ContactSectionProps) {
           role: formData.get('role'),
           municipality: formData.get('municipality'),
           message: formData.get('message'),
+          _honey: formData.get('_honey'),
           _subject: 'Nuevo contacto desde PAIDEIA',
           _captcha: 'false',
           _template: 'table',
@@ -70,6 +71,11 @@ export default function ContactSection({ content }: ContactSectionProps) {
                 <input className={fieldClasses} name="email" type="email" autoComplete="email" required />
               </label>
             </div>
+
+            <label aria-hidden="true" className="absolute -left-[9999px] top-auto h-px w-px overflow-hidden">
+              Website
+              <input name="_honey" type="text" tabIndex={-1} autoComplete="off" />
+            </label>
 
             <div className="mt-6 grid gap-6 md:grid-cols-2">
               <label className="block text-sm font-medium text-charcoal">
