@@ -76,8 +76,8 @@ export default function Header() {
       </div>
 
       {isOpen ? (
-        <div id="mobile-nav" className="border-t border-stone/20 bg-white md:hidden">
-          <div className="mx-auto max-w-7xl px-5 py-6 sm:px-8">
+        <div id="mobile-nav" className="fixed inset-x-0 bottom-0 top-[72px] z-50 overflow-y-auto border-t border-stone/20 bg-white md:hidden">
+          <div className="mx-auto max-w-7xl px-5 py-6 pb-10 sm:px-8">
             <nav aria-label={content.footer.linksLabel}>
               <ul className="grid gap-3 text-base text-earth">
                 {content.header.nav.map((item) => (
