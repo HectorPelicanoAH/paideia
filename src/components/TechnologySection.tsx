@@ -15,7 +15,7 @@ export default function TechnologySection({ content }: TechnologySectionProps) {
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {content.principles.map((principle, index) => (
           <Reveal key={principle.title} delay={index * 90} className="flex">
-            <article className="flex flex-col rounded-[2rem] border border-stone/20 bg-cream p-6 sm:p-8">
+            <article className="flex flex-1 flex-col rounded-[2rem] border border-stone/20 bg-cream p-6 sm:p-8">
               <h3 className="font-serif text-xl text-charcoal sm:text-2xl">{principle.title}</h3>
               <p className="mt-4 leading-7 text-earth">{principle.text}</p>
             </article>
