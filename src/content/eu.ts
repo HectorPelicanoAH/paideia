@@ -306,9 +306,7 @@ const eu: SiteContent = {
     eyebrow: 'Kontaktua',
     title: 'Jarrai dezagun solasean.',
     intro:
-      'Udalerria, maisua, laguntzailea edo parte-hartzaile posiblea bazara, idatzi iezaguzu. Formulario hau etorkizuneko kontaktu-kanalera konektatzeko prest dago.',
-    noteLabel: 'Oharra',
-    note: 'Erakusteko formularioa da: oraingoz ez du daturik bidaltzen, baina backend edo formulario-zerbitzu batekin integratzeko prest dago.',
+      'Udalerria, maisua, laguntzailea edo parte-hartzaile posiblea bazara, idatzi iezaguzu eta ahal bezain laster erantzungo dizugu.',
     form: {
       nameLabel: 'Izena',
       emailLabel: 'Posta elektronikoa',
@@ -316,6 +314,9 @@ const eu: SiteContent = {
       municipalityLabel: 'Udalerria/Probintzia (aukerakoa)',
       messageLabel: 'Mezua',
       submitLabel: 'Kontsulta bidali',
+      sendingLabel: 'Bidaltzen...',
+      successMessage: 'Eskerrik asko. Zure mezua ondo bidali da.',
+      errorMessage: 'Ezin izan dugu zure mezua bidali. Saiatu berriro minutu batzuk barru.',
       placeholderNote: 'Kontaiguzu zer interesatzen zaizun, zer ekar dezakezun edo zein herri duzun buruan.',
       roleOptions: [
         { value: 'municipality', label: 'Udalerria' },

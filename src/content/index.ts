@@ -145,8 +145,6 @@ export interface SiteContent {
     eyebrow: string
     title: string
     intro: string
-    noteLabel: string
-    note: string
     form: {
       nameLabel: string
       emailLabel: string
@@ -154,6 +152,9 @@ export interface SiteContent {
       municipalityLabel: string
       messageLabel: string
       submitLabel: string
+      sendingLabel: string
+      successMessage: string
+      errorMessage: string
       placeholderNote: string
       roleOptions: RoleOption[]
     }

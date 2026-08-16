@@ -306,9 +306,7 @@ const es: SiteContent = {
     eyebrow: 'Contacto',
     title: 'Sigamos la conversación.',
     intro:
-      'Si eres municipio, maestro, colaborador o posible participante, escríbenos. Este formulario está preparado para conectarse con el futuro canal de contacto del proyecto.',
-    noteLabel: 'Nota',
-    note: 'Formulario de demostración: ahora mismo no envía datos, pero ya está listo para integrarse con un backend o con un servicio de formularios.',
+      'Si eres municipio, maestro, colaborador o posible participante, escríbenos y te responderemos lo antes posible.',
     form: {
       nameLabel: 'Nombre',
       emailLabel: 'Correo electrónico',
@@ -316,6 +314,9 @@ const es: SiteContent = {
       municipalityLabel: 'Municipio/Provincia (opcional)',
       messageLabel: 'Mensaje',
       submitLabel: 'Enviar consulta',
+      sendingLabel: 'Enviando...',
+      successMessage: 'Gracias. Tu mensaje se ha enviado correctamente.',
+      errorMessage: 'No hemos podido enviar tu mensaje. Inténtalo de nuevo en unos minutos.',
       placeholderNote: 'Cuéntanos qué te interesa, qué puedes aportar o qué pueblo tienes en mente.',
       roleOptions: [
         { value: 'municipality', label: 'Municipio' },
