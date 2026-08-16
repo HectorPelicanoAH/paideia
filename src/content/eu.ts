@@ -307,6 +307,7 @@ const eu: SiteContent = {
     title: 'Jarrai dezagun solasean.',
     intro:
       'Udalerria, maisua, laguntzailea edo parte-hartzaile posiblea bazara, idatzi iezaguzu. Formulario hau etorkizuneko kontaktu-kanalera konektatzeko prest dago.',
+    noteLabel: 'Oharra',
     note: 'Erakusteko formularioa da: oraingoz ez du daturik bidaltzen, baina backend edo formulario-zerbitzu batekin integratzeko prest dago.',
     form: {
       nameLabel: 'Izena',

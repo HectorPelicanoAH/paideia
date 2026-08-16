@@ -307,6 +307,7 @@ const ca: SiteContent = {
     title: 'Continuem la conversa.',
     intro:
       'Si ets municipi, mestre, col·laborador o participant potencial, escriu-nos. Aquest formulari està preparat per connectar-se amb el futur canal de contacte del projecte.',
+    noteLabel: 'Nota',
     note: 'Formulari de demostració: actualment no envia dades, però ja està preparat per integrar-hi un backend o un servei de formularis.',
     form: {
       nameLabel: 'Nom',

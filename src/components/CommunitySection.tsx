@@ -22,7 +22,7 @@ export default function CommunitySection({ content }: CommunitySectionProps) {
         </div>
         <Reveal delay={240}>
           <div className="rounded-[2rem] bg-green px-8 py-10 text-cream">
-            <p className="text-sm uppercase tracking-[0.28em] text-cream/70">Comunitat</p>
+            <p className="text-sm uppercase tracking-[0.28em] text-cream/70">{content.eyebrow}</p>
             <p className="mt-5 font-serif text-3xl leading-relaxed">“{content.quote}”</p>
           </div>
         </Reveal>

@@ -60,7 +60,7 @@ export default function ContactSection({ content }: ContactSectionProps) {
 
         <Reveal delay={180}>
           <div className="rounded-[2rem] border border-stone/20 bg-charcoal p-8 text-cream">
-            <p className="text-sm uppercase tracking-[0.28em] text-cream/70">Nota</p>
+            <p className="text-sm uppercase tracking-[0.28em] text-cream/70">{content.noteLabel}</p>
             <p className="mt-5 text-lg leading-8 text-cream/90">{content.note}</p>
           </div>
         </Reveal>

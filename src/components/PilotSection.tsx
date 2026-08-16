@@ -23,7 +23,7 @@ export default function PilotSection({ content }: PilotSectionProps) {
         </div>
         <Reveal delay={240} className="flex items-stretch">
           <div className="flex w-full flex-col justify-between rounded-[2rem] bg-cream p-8">
-            <p className="text-sm uppercase tracking-[0.28em] text-green">Pilot</p>
+            <p className="text-sm uppercase tracking-[0.28em] text-green">{content.eyebrow}</p>
             <p className="mt-6 font-serif text-3xl leading-relaxed text-charcoal">“{content.villageQuote}”</p>
           </div>
         </Reveal>

@@ -307,6 +307,7 @@ const gl: SiteContent = {
     title: 'Sigamos a conversa.',
     intro:
       'Se es concello, mestre, colaboradora ou posible participante, escríbenos. Este formulario está preparado para conectarse coa futura canle de contacto do proxecto.',
+    noteLabel: 'Nota',
     note: 'Formulario de demostración: arestora non envía datos, pero xa está listo para integrarse cun backend ou cun servizo de formularios.',
     form: {
       nameLabel: 'Nome',

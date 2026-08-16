@@ -145,6 +145,7 @@ export interface SiteContent {
     eyebrow: string
     title: string
     intro: string
+    noteLabel: string
     note: string
     form: {
       nameLabel: string

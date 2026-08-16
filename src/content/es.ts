@@ -307,6 +307,7 @@ const es: SiteContent = {
     title: 'Sigamos la conversación.',
     intro:
       'Si eres municipio, maestro, colaborador o posible participante, escríbenos. Este formulario está preparado para conectarse con el futuro canal de contacto del proyecto.',
+    noteLabel: 'Nota',
     note: 'Formulario de demostración: ahora mismo no envía datos, pero ya está listo para integrarse con un backend o con un servicio de formularios.',
     form: {
       nameLabel: 'Nombre',
