@@ -306,9 +306,7 @@ const ca: SiteContent = {
     eyebrow: 'Contacte',
     title: 'Continuem la conversa.',
     intro:
-      'Si ets municipi, mestre, col·laborador o participant potencial, escriu-nos. Aquest formulari està preparat per connectar-se amb el futur canal de contacte del projecte.',
-    noteLabel: 'Nota',
-    note: 'Formulari de demostració: actualment no envia dades, però ja està preparat per integrar-hi un backend o un servei de formularis.',
+      'Si ets municipi, mestre, col·laborador o participant potencial, escriu-nos i et respondrem tan aviat com puguem.',
     form: {
       nameLabel: 'Nom',
       emailLabel: 'Correu electrònic',
@@ -316,6 +314,9 @@ const ca: SiteContent = {
       municipalityLabel: 'Municipi/Província (opcional)',
       messageLabel: 'Missatge',
       submitLabel: 'Enviar consulta',
+      sendingLabel: 'Enviant...',
+      successMessage: 'Gràcies. El teu missatge s’ha enviat correctament.',
+      errorMessage: 'No hem pogut enviar el teu missatge. Torna-ho a provar d’aquí a uns minuts.',
       placeholderNote: 'Explica’ns què t’interessa, què pots aportar o quin poble tens al cap.',
       roleOptions: [
         { value: 'municipality', label: 'Municipi' },

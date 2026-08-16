@@ -1,3 +1,4 @@
+import { useState, type FormEvent } from 'react'
 import type { SiteContent } from '../content/index.ts'
 import Reveal from './Reveal.tsx'
 import Section from './Section.tsx'
@@ -10,11 +11,56 @@ const fieldClasses =
   'mt-2 w-full rounded-2xl border border-stone/30 bg-white px-4 py-3 text-base text-charcoal outline-none transition placeholder:text-stone focus:border-green focus:ring-2 focus:ring-green/20'
 
 export default function ContactSection({ content }: ContactSectionProps) {
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+
+    const form = event.currentTarget
+    const formData = new FormData(form)
+    const recipient = String.fromCharCode(112, 101, 108, 105, 46, 116, 108, 99, 64, 103, 109, 97, 105, 108, 46, 99, 111, 109)
+
+    setStatus('sending')
+
+    try {
+      const response = await fetch(`https://formsubmit.co/ajax/${recipient}`, {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.get('name'),
+          email: formData.get('email'),
+          role: formData.get('role'),
+          municipality: formData.get('municipality'),
+          message: formData.get('message'),
+          _honey: formData.get('_honey'),
+          _subject: 'Nuevo contacto desde PAIDEIA',
+          _captcha: 'false',
+          _template: 'table',
+        }),
+      })
+
+      if (!response.ok) {
+        throw new Error('Request failed')
+      }
+
+      form.reset()
+      setStatus('success')
+    } catch {
+      setStatus('error')
+    }
+  }
+
   return (
     <Section id="contact" background="cream" eyebrow={content.eyebrow} title={content.title} intro={content.intro}>
-      <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(280px,0.7fr)]">
+      <div className="mx-auto max-w-4xl">
         <Reveal>
-          <form action="#" className="rounded-[2rem] bg-white p-8 shadow-[0_24px_80px_rgba(45,42,38,0.08)]">
+          <form
+            className="rounded-[2rem] bg-white p-8 shadow-[0_24px_80px_rgba(45,42,38,0.08)]"
+            onSubmit={handleSubmit}
+          >
             <div className="grid gap-6 md:grid-cols-2">
               <label className="block text-sm font-medium text-charcoal">
                 {content.form.nameLabel}
@@ -25,6 +71,11 @@ export default function ContactSection({ content }: ContactSectionProps) {
                 <input className={fieldClasses} name="email" type="email" autoComplete="email" required />
               </label>
             </div>
+
+            <label aria-hidden="true" className="absolute -left-[9999px] top-auto h-px w-px overflow-hidden">
+              Website
+              <input name="_honey" type="text" tabIndex={-1} autoComplete="off" />
+            </label>
 
             <div className="mt-6 grid gap-6 md:grid-cols-2">
               <label className="block text-sm font-medium text-charcoal">
@@ -49,20 +100,26 @@ export default function ContactSection({ content }: ContactSectionProps) {
             </label>
 
             <p className="mt-4 text-sm leading-7 text-earth">{content.form.placeholderNote}</p>
+            <p
+              aria-live="polite"
+              className={`mt-4 text-sm leading-7 ${
+                status === 'error' ? 'text-[#a6472f]' : 'text-earth'
+              } ${status === 'idle' ? 'hidden' : 'block'}`}
+            >
+              {status === 'sending'
+                ? content.form.sendingLabel
+                : status === 'success'
+                  ? content.form.successMessage
+                  : content.form.errorMessage}
+            </p>
             <button
               type="submit"
+              disabled={status === 'sending'}
               className="mt-8 inline-flex rounded-full bg-green px-6 py-4 text-sm font-semibold text-cream transition hover:bg-green-light"
             >
-              {content.form.submitLabel}
+              {status === 'sending' ? content.form.sendingLabel : content.form.submitLabel}
             </button>
           </form>
-        </Reveal>
-
-        <Reveal delay={180}>
-          <div className="rounded-[2rem] border border-stone/20 bg-charcoal p-8 text-cream">
-            <p className="text-sm uppercase tracking-[0.28em] text-cream/70">{content.noteLabel}</p>
-            <p className="mt-5 text-lg leading-8 text-cream/90">{content.note}</p>
-          </div>
         </Reveal>
       </div>
     </Section>

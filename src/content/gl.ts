@@ -306,9 +306,7 @@ const gl: SiteContent = {
     eyebrow: 'Contacto',
     title: 'Sigamos a conversa.',
     intro:
-      'Se es concello, mestre, colaboradora ou posible participante, escríbenos. Este formulario está preparado para conectarse coa futura canle de contacto do proxecto.',
-    noteLabel: 'Nota',
-    note: 'Formulario de demostración: arestora non envía datos, pero xa está listo para integrarse cun backend ou cun servizo de formularios.',
+      'Se es concello, mestre, colaboradora ou posible participante, escríbenos e responderemos canto antes.',
     form: {
       nameLabel: 'Nome',
       emailLabel: 'Correo electrónico',
@@ -316,6 +314,9 @@ const gl: SiteContent = {
       municipalityLabel: 'Concello/Provincia (opcional)',
       messageLabel: 'Mensaxe',
       submitLabel: 'Enviar consulta',
+      sendingLabel: 'Enviando...',
+      successMessage: 'Grazas. A túa mensaxe enviouse correctamente.',
+      errorMessage: 'Non puidemos enviar a túa mensaxe. Téntao de novo nuns minutos.',
       placeholderNote: 'Cóntanos que che interesa, que podes achegar ou que pobo tes na cabeza.',
       roleOptions: [
         { value: 'municipality', label: 'Concello' },

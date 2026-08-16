@@ -70,5 +70,5 @@ The workflow in `.github/workflows/deploy.yml` deploys the generated `dist/` fol
 
 ## Notes
 
-- The contact form is intentionally static (`action="#"`) and ready for future backend or form-service integration.
+- The contact form sends submissions through a form delivery service configured in the client code.
 - Fonts are loaded from Google Fonts (`Playfair Display` and `Inter`).
