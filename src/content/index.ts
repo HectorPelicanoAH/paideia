@@ -59,6 +59,7 @@ export interface SiteContent {
     participateLabel: string
   }
   hero: {
+    eyebrow: string
     title: string
     subtitle: string
     description: string

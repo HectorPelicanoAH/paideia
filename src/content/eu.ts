@@ -41,6 +41,7 @@ const eu: SiteContent = {
     participateLabel: 'Parte hartu',
   },
   hero: {
+    eyebrow: 'BIZITZEKO, IKASTEKO ETA PARTEKATZEKO MODU BAT',
     title: 'PAIDEIA',
     subtitle: 'Bizitzen ikasteko komunitate bat.',
     description:

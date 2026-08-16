@@ -41,6 +41,7 @@ const es: SiteContent = {
     participateLabel: 'Quiero participar',
   },
   hero: {
+    eyebrow: 'UNA FORMA DE VIVIR, APRENDER Y COMPARTIR',
     title: 'PAIDEIA',
     subtitle: 'Una comunidad para aprender a vivir.',
     description:
