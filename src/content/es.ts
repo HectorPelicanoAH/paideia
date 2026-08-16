@@ -24,6 +24,7 @@ const es: SiteContent = {
       { label: 'Por qué', href: '#why' },
       { label: 'Qué es', href: '#what' },
       { label: 'Aprender haciendo', href: '#learning' },
+      { label: 'Tecnología y vida', href: '#technology' },
       { label: 'Ritmo estacional', href: '#seasons' },
       { label: 'Comunidad', href: '#community' },
       { label: 'Territorio', href: '#territory' },
@@ -110,6 +111,39 @@ const es: SiteContent = {
       },
     ],
     closing: 'Creemos que el trabajo puede ser una fuente de dignidad, aprendizaje y servicio.',
+  },
+  technology: {
+    eyebrow: 'Tecnología al servicio de la vida',
+    title: 'Tecnología con escala humana para cuidar personas y territorio.',
+    intro:
+      'PAIDEIA no rechaza la tecnología ni quiere regresar al pasado. Queremos usar las tecnologías contemporáneas cuando de verdad mejoran la vida de las personas y del lugar.',
+    positioning:
+      'Automatización, energías renovables, herramientas digitales, fabricación avanzada e inteligencia artificial pueden ser útiles si fortalecen autonomía, criterio y capacidad de servicio. La tecnología debe estar al servicio de las personas, no las personas al servicio de la tecnología.',
+    principles: [
+      {
+        title: 'Amplificar, no sustituir',
+        text: 'Buscamos herramientas que aumenten capacidades humanas y ayuden a trabajar mejor, sin eliminar de forma innecesaria la capacidad de comprender, crear, reparar y decidir.',
+      },
+      {
+        title: 'Eficiencia con propósito',
+        text: 'Queremos eficiencia para ganar autonomía, seguridad, tiempo y bienestar, no para entrar en una lógica de producir y consumir sin límite.',
+      },
+      {
+        title: 'Escala humana',
+        text: 'Elegimos tecnologías adecuadas al contexto y a las necesidades reales del territorio. Lo grande o sofisticado no es siempre lo mejor.',
+      },
+      {
+        title: 'Naturaleza como límite',
+        text: 'Cada decisión tecnológica debe considerar recursos, energía, materiales y residuos. No aceptamos beneficios presentes que trasladen costes al territorio o a generaciones futuras.',
+      },
+      {
+        title: 'Conocer la herramienta',
+        text: 'Aprender también implica comprender la tecnología que usamos. Siempre que sea posible, priorizamos conocimiento, reparación, mantenimiento y autonomía frente a la dependencia de cajas negras.',
+      },
+    ],
+    mainMessage: 'No rechazamos el futuro. Queremos construirlo a escala humana.',
+    featuredQuote:
+      'La pregunta no es si podemos hacerlo con tecnología. La pregunta es si hacerlo con tecnología nos ayuda a vivir mejor.',
   },
   seasons: {
     eyebrow: 'Ritmo de las estaciones',

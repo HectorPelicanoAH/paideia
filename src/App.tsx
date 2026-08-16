@@ -11,6 +11,7 @@ import MastersSection from './components/MastersSection.tsx'
 import ParticipateSection from './components/ParticipateSection.tsx'
 import PilotSection from './components/PilotSection.tsx'
 import SeasonsSection from './components/SeasonsSection.tsx'
+import TechnologySection from './components/TechnologySection.tsx'
 import TerritorySection from './components/TerritorySection.tsx'
 import WhatSection from './components/WhatSection.tsx'
 import WhySection from './components/WhySection.tsx'
@@ -54,6 +55,7 @@ export default function App() {
         <WhySection content={content.why} />
         <WhatSection content={content.what} />
         <LearningSection content={content.learning} />
+        <TechnologySection content={content.technology} />
         <SeasonsSection content={content.seasons} />
         <CommunitySection content={content.community} />
         <TerritorySection content={content.territory} />

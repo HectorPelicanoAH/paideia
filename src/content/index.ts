@@ -87,6 +87,15 @@ export interface SiteContent {
     steps: HighlightItem[]
     closing: string
   }
+  technology: {
+    eyebrow: string
+    title: string
+    intro: string
+    positioning: string
+    principles: HighlightItem[]
+    mainMessage: string
+    featuredQuote: string
+  }
   seasons: {
     eyebrow: string
     title: string

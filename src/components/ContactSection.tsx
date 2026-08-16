@@ -18,7 +18,40 @@ export default function ContactSection({ content }: ContactSectionProps) {
 
     const form = event.currentTarget
     const formData = new FormData(form)
-    const recipient = String.fromCharCode(112, 101, 108, 105, 46, 116, 108, 99, 64, 103, 109, 97, 105, 108, 46, 99, 111, 109)
+    const recipient = String.fromCharCode(
+      102,
+      48,
+      97,
+      99,
+      101,
+      54,
+      49,
+      50,
+      49,
+      57,
+      56,
+      101,
+      101,
+      53,
+      55,
+      48,
+      50,
+      50,
+      102,
+      50,
+      52,
+      49,
+      52,
+      102,
+      55,
+      56,
+      51,
+      99,
+      48,
+      48,
+      49,
+      97,
+    )
 
     setStatus('sending')
 
