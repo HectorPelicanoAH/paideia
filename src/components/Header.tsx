@@ -12,33 +12,44 @@ export default function Header() {
   }
 
   return (
-    <header className="sticky top-0 z-50 border-b border-stone/20 bg-white/90 backdrop-blur">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4 sm:px-8 lg:px-12">
+    <header className="relative z-50">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8">
+        {/* Logo */}
         <a
           href="#top"
-          aria-label={content.header.homeLabel}
-          className="font-serif text-2xl tracking-[0.18em] text-charcoal transition-colors hover:text-green"
+          className="text-2xl font-semibold tracking-[0.18em] text-charcoal"
+          aria-label="PAIDEIA"
+          onClick={() => setIsOpen(false)}
         >
           PAIDEIA
         </a>
 
+        {/* Mobile menu button */}
         <button
           type="button"
           aria-expanded={isOpen}
           aria-controls="mobile-nav"
-          aria-label={isOpen ? content.header.closeLabel : content.header.menuLabel}
+          aria-label={
+            isOpen
+              ? content.header.closeLabel
+              : content.header.menuLabel
+          }
           className="inline-flex rounded-full border border-stone/40 px-4 py-2 text-sm text-charcoal md:hidden"
           onClick={() => setIsOpen((open) => !open)}
         >
           {isOpen ? '×' : 'Menú'}
         </button>
 
+        {/* Desktop navigation */}
         <div className="hidden items-center gap-6 md:flex">
           <nav aria-label={content.footer.linksLabel}>
             <ul className="flex flex-wrap items-center gap-4 text-sm text-earth">
               {content.header.nav.map((item) => (
                 <li key={item.href}>
-                  <a className="transition-colors hover:text-green focus-visible:text-green" href={item.href}>
+                  <a
+                    className="transition-colors hover:text-green focus-visible:text-green"
+                    href={item.href}
+                  >
                     {item.label}
                   </a>
                 </li>
@@ -46,26 +57,36 @@ export default function Header() {
             </ul>
           </nav>
 
-          <div className="flex items-center gap-2" aria-label={content.header.languageSelectorLabel}>
-            {(['ca', 'es', 'eu', 'gl'] as LanguageCode[]).map((option) => {
-              const active = option === language
-              return (
-                <button
-                  key={option}
-                  type="button"
-                  lang={option}
-                  aria-pressed={active}
-                  onClick={() => setLanguage(option)}
-                  className={`rounded-full px-3 py-2 text-xs font-semibold uppercase tracking-[0.22em] transition ${
-                    active ? 'bg-charcoal text-cream' : 'bg-cream text-earth hover:bg-stone/20'
-                  }`}
-                >
-                  {option}
-                </button>
-              )
-            })}
+          {/* Desktop language selector */}
+          <div
+            className="flex items-center gap-2"
+            aria-label={content.header.languageSelectorLabel}
+          >
+            {(['ca', 'es', 'eu', 'gl'] as LanguageCode[]).map(
+              (option) => {
+                const active = option === language
+
+                return (
+                  <button
+                    key={option}
+                    type="button"
+                    lang={option}
+                    aria-pressed={active}
+                    onClick={() => setLanguage(option)}
+                    className={`rounded-full px-3 py-2 text-xs font-semibold uppercase tracking-[0.22em] transition ${
+                      active
+                        ? 'bg-charcoal text-cream'
+                        : 'bg-cream text-earth hover:bg-stone/20'
+                    }`}
+                  >
+                    {option}
+                  </button>
+                )
+              },
+            )}
           </div>
 
+          {/* Desktop CTA */}
           <a
             href="#participate"
             className="rounded-full bg-green px-5 py-3 text-sm font-medium text-cream transition hover:bg-green-light"
@@ -75,38 +96,88 @@ export default function Header() {
         </div>
       </div>
 
+      {/* Mobile navigation */}
       {isOpen ? (
-        <div id="mobile-nav" className="fixed inset-x-0 bottom-0 top-[72px] z-50 overflow-y-auto border-t border-stone/20 bg-white md:hidden">
-          <div className="mx-auto max-w-7xl px-5 py-6 pb-10 sm:px-8">
+        <div
+          id="mobile-nav"
+          className="
+            fixed
+            inset-x-0
+            top-[72px]
+            z-40
+            max-h-[calc(100dvh-72px)]
+            overflow-y-auto
+            overscroll-contain
+            border-t
+            border-stone/20
+            bg-white
+            md:hidden
+          "
+        >
+          <div className="mx-auto max-w-7xl px-5 py-6 pb-12 sm:px-8">
+            {/* Navigation links */}
             <nav aria-label={content.footer.linksLabel}>
               <ul className="grid gap-3 text-base text-earth">
                 {content.header.nav.map((item) => (
                   <li key={item.href}>
-                    <a className="block rounded-2xl px-3 py-2 hover:bg-cream" href={item.href} onClick={() => setIsOpen(false)}>
+                    <a
+                      className="block rounded-2xl px-3 py-3 transition-colors hover:bg-cream"
+                      href={item.href}
+                      onClick={() => setIsOpen(false)}
+                    >
                       {item.label}
                     </a>
                   </li>
                 ))}
               </ul>
             </nav>
-            <div className="mt-6 flex flex-wrap gap-2" aria-label={content.header.languageSelectorLabel}>
-              {(['ca', 'es', 'eu', 'gl'] as LanguageCode[]).map((option) => {
-                const active = option === language
-                return (
-                  <button
-                    key={option}
-                    type="button"
-                    lang={option}
-                    aria-pressed={active}
-                    onClick={() => handleLanguageChange(option)}
-                    className={`rounded-full px-3 py-2 text-xs font-semibold uppercase tracking-[0.22em] ${
-                      active ? 'bg-charcoal text-cream' : 'bg-cream text-earth'
-                    }`}
-                  >
-                    {option}
-                  </button>
-                )
-              })}
+
+            {/* Mobile language selector */}
+            <div
+              className="mt-6 border-t border-stone/20 pt-6"
+              aria-label={content.header.languageSelectorLabel}
+            >
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-earth/70">
+                {content.header.languageSelectorLabel}
+              </p>
+
+              <div className="flex flex-wrap gap-2">
+                {(['ca', 'es', 'eu', 'gl'] as LanguageCode[]).map(
+                  (option) => {
+                    const active = option === language
+
+                    return (
+                      <button
+                        key={option}
+                        type="button"
+                        lang={option}
+                        aria-pressed={active}
+                        onClick={() =>
+                          handleLanguageChange(option)
+                        }
+                        className={`rounded-full px-4 py-3 text-xs font-semibold uppercase tracking-[0.22em] transition ${
+                          active
+                            ? 'bg-charcoal text-cream'
+                            : 'bg-cream text-earth hover:bg-stone/20'
+                        }`}
+                      >
+                        {option}
+                      </button>
+                    )
+                  },
+                )}
+              </div>
+            </div>
+
+            {/* Mobile CTA */}
+            <div className="mt-6 border-t border-stone/20 pt-6">
+              <a
+                href="#participate"
+                onClick={() => setIsOpen(false)}
+                className="block w-full rounded-full bg-green px-5 py-4 text-center text-sm font-medium text-cream transition hover:bg-green-light"
+              >
+                {content.header.participateLabel}
+              </a>
             </div>
           </div>
         </div>
