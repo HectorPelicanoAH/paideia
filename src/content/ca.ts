@@ -24,6 +24,7 @@ const ca: SiteContent = {
       { label: 'Per què', href: '#why' },
       { label: 'Què és', href: '#what' },
       { label: 'Aprendre fent', href: '#learning' },
+      { label: 'Tecnologia i vida', href: '#technology' },
       { label: 'Ritme estacional', href: '#seasons' },
       { label: 'Comunitat', href: '#community' },
       { label: 'Territori', href: '#territory' },
@@ -110,6 +111,39 @@ const ca: SiteContent = {
       },
     ],
     closing: 'Creiem que el treball pot ser una font de dignitat, aprenentatge i servei.',
+  },
+  technology: {
+    eyebrow: 'Tecnologia al servei de la vida',
+    title: 'Tecnologia amb escala humana per cuidar persones i territori.',
+    intro:
+      'PAIDEIA no rebutja la tecnologia ni vol tornar al passat. Volem utilitzar les tecnologies contemporànies quan realment milloren la vida de les persones i del lloc.',
+    positioning:
+      'Automatització, energies renovables, eines digitals, fabricació avançada i intel·ligència artificial poden ser útils si reforcen autonomia, criteri i capacitat de servei. La tecnologia ha d’estar al servei de les persones, no les persones al servei de la tecnologia.',
+    principles: [
+      {
+        title: 'Amplificar, no substituir',
+        text: 'Busquem eines que augmentin les capacitats humanes i ajudin a treballar millor, sense eliminar innecessàriament la capacitat de comprendre, crear, reparar i decidir.',
+      },
+      {
+        title: 'Eficiència amb propòsit',
+        text: 'Volem eficiència per guanyar autonomia, seguretat, temps i benestar, no per entrar en una lògica de produir i consumir sense límit.',
+      },
+      {
+        title: 'Escala humana',
+        text: 'Triem tecnologies adequades al context i a les necessitats reals del territori. El que és gran o sofisticat no és sempre el millor.',
+      },
+      {
+        title: 'Natura com a límit',
+        text: 'Cada decisió tecnològica ha de considerar recursos, energia, materials i residus. No acceptem beneficis presents que traslladin costos al territori o a les generacions futures.',
+      },
+      {
+        title: 'Conèixer l’eina',
+        text: 'Aprendre també implica entendre la tecnologia que utilitzem. Sempre que sigui possible, prioritzem coneixement, reparació, manteniment i autonomia davant la dependència de caixes negres.',
+      },
+    ],
+    mainMessage: 'No rebutgem el futur. Volem construir-lo a escala humana.',
+    featuredQuote:
+      'La pregunta no és si ho podem fer amb tecnologia. La pregunta és si fer-ho amb tecnologia ens ajuda a viure millor.',
   },
   seasons: {
     eyebrow: 'Ritme de les estacions',

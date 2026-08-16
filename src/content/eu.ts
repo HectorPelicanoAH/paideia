@@ -24,6 +24,7 @@ const eu: SiteContent = {
       { label: 'Zergatik', href: '#why' },
       { label: 'Zer da', href: '#what' },
       { label: 'Eginez ikasi', href: '#learning' },
+      { label: 'Teknologia eta bizitza', href: '#technology' },
       { label: 'Urtaroen erritmoa', href: '#seasons' },
       { label: 'Komunitatea', href: '#community' },
       { label: 'Lurraldea', href: '#territory' },
@@ -110,6 +111,39 @@ const eu: SiteContent = {
       },
     ],
     closing: 'Lan egitea duintasun, ikaskuntza eta zerbitzu iturri izan daitekeela sinesten dugu.',
+  },
+  technology: {
+    eyebrow: 'Teknologia bizitzaren zerbitzura',
+    title: 'Giza eskalako teknologia pertsonak eta lurraldea zaintzeko.',
+    intro:
+      'PAIDEIAk ez du teknologia baztertzen, ezta iraganera itzuli nahi ere. Gaur egungo teknologiak erabili nahi ditugu pertsonen eta tokiaren bizitza benetan hobetzen dutenean.',
+    positioning:
+      'Automatizazioa, energia berriztagarriak, tresna digitalak, fabrikazio aurreratua eta adimen artifiziala baliagarriak izan daitezke autonomia, irizpidea eta zerbitzurako gaitasuna indartzen badituzte. Teknologia pertsonen zerbitzura egon behar da, ez pertsonak teknologiaren zerbitzura.',
+    principles: [
+      {
+        title: 'Handitu, ez ordezkatu',
+        text: 'Giza gaitasunak handitzen dituzten eta hobeto lan egiten laguntzen duten tresnak bilatzen ditugu, ulertzeko, sortzeko, konpontzeko eta erabakitzeko gaitasuna alferrik galdu gabe.',
+      },
+      {
+        title: 'Helburua duen efizientzia',
+        text: 'Efizientzia autonomia, segurtasuna, denbora eta ongizatea irabazteko nahi dugu, ez mugarik gabe ekoitzi eta kontsumitzeko logika batean sartzeko.',
+      },
+      {
+        title: 'Giza eskala',
+        text: 'Testuingurura eta lurraldearen benetako beharretara egokitutako teknologiak aukeratzen ditugu. Handia edo sofistikatua izatea ez da beti hobea.',
+      },
+      {
+        title: 'Natura muga gisa',
+        text: 'Erabaki teknologiko bakoitzak baliabideak, energia, materialak eta hondakinak kontuan hartu behar ditu. Ez ditugu onartzen gaurko onurak lurraldeari edo etorkizuneko belaunaldiei kostua pasatuz lortzea.',
+      },
+      {
+        title: 'Tresna ezagutzea',
+        text: 'Ikasteak erabiltzen dugun teknologia ulertzea ere badakar. Ahal denean, ezagutza, konponketa, mantentzea eta autonomia lehenesten ditugu kutxa beltzen mendekotasunaren aurrean.',
+      },
+    ],
+    mainMessage: 'Ez dugu etorkizuna baztertzen. Giza eskalan eraiki nahi dugu.',
+    featuredQuote:
+      'Galdera ez da ea teknologiarekin egin dezakegun. Galdera da ea teknologiarekin egiteak hobeto bizitzen laguntzen digun.',
   },
   seasons: {
     eyebrow: 'Urtaroen erritmoa',
