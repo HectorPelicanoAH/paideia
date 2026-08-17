@@ -1,6 +1,7 @@
 import type { SiteContent } from '../content/index.ts'
 import Reveal from './Reveal.tsx'
 import Section from './Section.tsx'
+import EditorialImage from './EditorialImage.tsx'
 
 interface PilotSectionProps {
   content: SiteContent['pilot']
@@ -9,6 +10,7 @@ interface PilotSectionProps {
 export default function PilotSection({ content }: PilotSectionProps) {
   return (
     <Section id="pilot" background="white" eyebrow={content.eyebrow} title={content.title} intro={content.intro}>
+      <EditorialImage image="pilot" src="/paideia/images/proyecto-piloto.webp" width={1448} height={1086} className="aspect-[16/8]" imageClassName="object-[center_58%]" />
       <div className="grid gap-6 lg:grid-cols-[minmax(0,1.2fr)_minmax(280px,0.8fr)]">
         <div className="grid gap-6 md:grid-cols-2">
           {content.phases.map((phase, index) => (

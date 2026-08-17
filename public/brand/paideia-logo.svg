@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 860" role="img" aria-labelledby="title desc">
+  <title id="title">PAIDEIA</title>
+  <desc id="desc">Una comunitat per aprendre a viure.</desc>
+  <defs>
+    <g id="hand"><path d="M112 167C137 105 193 61 258 50c49-8 96 2 135 27 8 5 6 16-4 15-36-5-70-6-102-3-38 4-71 16-98 37-21 16-39 36-55 58-8 11-29-3-22-17Z"/><path d="M245 111c24-10 54-12 82-7 9 2 10 11 1 14-19 6-35 15-50 27-7 6-18 4-23-3l-15-20c-4-5-1-9 5-11Z"/></g>
+  </defs>
+  <g transform="translate(104 32)"><g fill="#C8963E"><use href="#hand"/></g><g fill="#AF521C" transform="rotate(72 256 256)"><use href="#hand"/></g><g fill="#294A59" transform="rotate(144 256 256)"><use href="#hand"/></g><g fill="#AEA596" transform="rotate(216 256 256)"><use href="#hand"/></g><g fill="#526843" transform="rotate(288 256 256)"><use href="#hand"/></g><circle cx="256" cy="256" r="27" fill="#77370F"/></g>
+  <text x="360" y="650" text-anchor="middle" fill="#1D3528" font-family="Georgia, 'Times New Roman', serif" font-size="102" letter-spacing="18">PAIDEIA</text>
+  <text x="360" y="718" text-anchor="middle" fill="#1D3528" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="500" letter-spacing="3.2">UNA COMUNITAT PER APRENDRE A VIURE.</text>
+  <line x1="312" y1="765" x2="408" y2="765" stroke="#AEA596" stroke-width="2"/>
+  <text x="360" y="817" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="600" letter-spacing="1.5"><tspan fill="#526843">APRENDRE</tspan><tspan fill="#AEA596"> · </tspan><tspan fill="#C8963E">FER</tspan><tspan fill="#AEA596"> · </tspan><tspan fill="#AF521C">CUIDAR</tspan><tspan fill="#AEA596"> · </tspan><tspan fill="#294A59">COMPARTIR</tspan><tspan fill="#AEA596"> · TRANSMETRE</tspan></text>
+</svg>

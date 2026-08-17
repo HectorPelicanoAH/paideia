@@ -1,6 +1,7 @@
 import type { SiteContent } from '../content/index.ts'
 import Reveal from './Reveal.tsx'
 import Section from './Section.tsx'
+import EditorialImage from './EditorialImage.tsx'
 
 interface ParticipateSectionProps {
   content: SiteContent['participate']
@@ -9,6 +10,7 @@ interface ParticipateSectionProps {
 export default function ParticipateSection({ content }: ParticipateSectionProps) {
   return (
     <Section id="participate" background="cream" eyebrow={content.eyebrow} title={content.title} intro={content.intro}>
+      <EditorialImage image="participate" src="/paideia/images/participacion.webp" width={1536} height={1024} className="aspect-[16/7]" />
       <div className="grid gap-6 lg:grid-cols-3">
         {content.cards.map((card, index) => (
           <Reveal key={card.title} delay={index * 100}>

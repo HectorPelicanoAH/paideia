@@ -1,6 +1,7 @@
 import type { SiteContent } from '../content/index.ts'
 import Reveal from './Reveal.tsx'
 import Section from './Section.tsx'
+import EditorialImage from './EditorialImage.tsx'
 
 interface CommunitySectionProps {
   content: SiteContent['community']
@@ -9,6 +10,7 @@ interface CommunitySectionProps {
 export default function CommunitySection({ content }: CommunitySectionProps) {
   return (
     <Section id="community" background="white" eyebrow={content.eyebrow} title={content.title} intro={content.intro}>
+      <EditorialImage image="community" src="/paideia/images/comunidad.webp" width={1536} height={1024} className="aspect-[16/7]" />
       <div className="grid gap-6 lg:grid-cols-[minmax(0,1.1fr)_minmax(280px,0.9fr)]">
         <div className="grid gap-6 md:grid-cols-3">
           {content.pillars.map((pillar, index) => (

@@ -12,16 +12,17 @@ export default function Header() {
   }
 
   return (
-    <header className="relative z-50">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8">
+    <header className="sticky top-0 z-50 border-b border-stone/20 bg-cream/95 backdrop-blur-xl">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 sm:px-8 lg:px-12">
         {/* Logo */}
         <a
           href="#top"
-          className="text-2xl font-semibold tracking-[0.18em] text-charcoal"
+          className="flex items-center gap-3 text-lg font-semibold tracking-[0.18em] text-green"
           aria-label="PAIDEIA"
           onClick={() => setIsOpen(false)}
         >
-          PAIDEIA
+          <img src="/paideia/brand/paideia-mark.svg" alt="" width="46" height="46" className="h-11 w-11" />
+          <span>PAIDEIA</span>
         </a>
 
         {/* Mobile menu button */}
@@ -37,14 +38,14 @@ export default function Header() {
           className="inline-flex rounded-full border border-stone/40 px-4 py-2 text-sm text-charcoal md:hidden"
           onClick={() => setIsOpen((open) => !open)}
         >
-          {isOpen ? '×' : 'Menú'}
+          {isOpen ? '×' : content.header.menuLabel}
         </button>
 
         {/* Desktop navigation */}
         <div className="hidden items-center gap-6 md:flex">
           <nav aria-label={content.footer.linksLabel}>
             <ul className="flex flex-wrap items-center gap-4 text-sm text-earth">
-              {content.header.nav.map((item) => (
+              {content.header.nav.slice(0, 8).map((item) => (
                 <li key={item.href}>
                   <a
                     className="transition-colors hover:text-green focus-visible:text-green"
@@ -103,14 +104,14 @@ export default function Header() {
           className="
             fixed
             inset-x-0
-            top-[72px]
+            top-[69px]
             z-40
-            max-h-[calc(100dvh-72px)]
+            max-h-[calc(100dvh-69px)]
             overflow-y-auto
             overscroll-contain
             border-t
             border-stone/20
-            bg-white
+            bg-cream
             md:hidden
           "
         >

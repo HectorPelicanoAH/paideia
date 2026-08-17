@@ -9,8 +9,9 @@ export default function Footer({ content }: FooterProps) {
     <footer className="bg-charcoal py-14 text-cream">
       <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[minmax(0,1fr)_minmax(320px,0.9fr)] lg:px-12">
         <div>
-          <a href="#top" className="font-serif text-3xl tracking-[0.16em] text-cream">
-            PAIDEIA
+          <a href="#top" className="inline-flex items-center gap-4 font-serif text-3xl tracking-[0.16em] text-cream">
+            <img src="/paideia/brand/paideia-mark-negative.svg" alt="" width="60" height="60" className="h-15 w-15 rounded-2xl" />
+            <span>PAIDEIA</span>
           </a>
           <p className="mt-5 max-w-xl text-lg leading-8 text-cream/80">{content.footer.tagline}</p>
           <p className="mt-3 max-w-xl leading-8 text-cream/60">{content.footer.contactPrompt}</p>
