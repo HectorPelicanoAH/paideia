@@ -13,15 +13,16 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-stone/20 bg-cream/95 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 sm:px-8 lg:px-12">
+      <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+        <div className="flex min-h-16 items-center justify-between py-2">
         {/* Logo */}
         <a
           href="#top"
-          className="flex items-center gap-3 text-lg font-semibold tracking-[0.18em] text-green"
+          className="flex flex-col items-center gap-0.5 text-[.68rem] font-semibold leading-none tracking-[0.22em] text-green"
           aria-label="PAIDEIA"
           onClick={() => setIsOpen(false)}
         >
-          <img src="/paideia/brand/paideia-mark.svg" alt="" width="46" height="46" className="h-11 w-11" />
+          <img src="/paideia/brand/paideia-mark.svg" alt="" width="42" height="42" className="h-10 w-10" />
           <span>PAIDEIA</span>
         </a>
 
@@ -41,23 +42,7 @@ export default function Header() {
           {isOpen ? '×' : content.header.menuLabel}
         </button>
 
-        {/* Desktop navigation */}
-        <div className="hidden items-center gap-6 md:flex">
-          <nav aria-label={content.footer.linksLabel}>
-            <ul className="flex flex-wrap items-center gap-4 text-sm text-earth">
-              {content.header.nav.slice(0, 8).map((item) => (
-                <li key={item.href}>
-                  <a
-                    className="transition-colors hover:text-green focus-visible:text-green"
-                    href={item.href}
-                  >
-                    {item.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
-
+        <div className="hidden items-center gap-5 md:flex">
           {/* Desktop language selector */}
           <div
             className="flex items-center gap-2"
@@ -95,6 +80,20 @@ export default function Header() {
             {content.header.participateLabel}
           </a>
         </div>
+        </div>
+
+        {/* Desktop navigation */}
+        <nav className="hidden border-t border-stone/20 md:block" aria-label={content.footer.linksLabel}>
+          <ul className="flex items-center justify-center gap-5 overflow-x-auto py-3 text-[.82rem] text-earth lg:gap-7">
+            {content.header.nav.slice(0, 8).map((item) => (
+              <li key={item.href} className="shrink-0">
+                <a className="transition-colors hover:text-green focus-visible:text-green" href={item.href}>
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </div>
 
       {/* Mobile navigation */}
@@ -104,9 +103,9 @@ export default function Header() {
           className="
             fixed
             inset-x-0
-            top-[69px]
+            top-[65px]
             z-40
-            max-h-[calc(100dvh-69px)]
+            max-h-[calc(100dvh-65px)]
             overflow-y-auto
             overscroll-contain
             border-t
