@@ -11,7 +11,7 @@ export default function PilotSection({ content }: PilotSectionProps) {
   return (
     <Section id="pilot" background="white" eyebrow={content.eyebrow} title={content.title} intro={content.intro}>
       <EditorialImage image="pilot" src="/paideia/images/proyecto-piloto.webp" width={1448} height={1086} className="aspect-[16/8]" imageClassName="object-[center_58%]" />
-      <div className="grid gap-6 lg:grid-cols-[minmax(0,1.2fr)_minmax(280px,0.8fr)]">
+      <div className="grid gap-6">
         <div className="grid gap-6 md:grid-cols-2">
           {content.phases.map((phase, index) => (
             <Reveal key={phase.title} delay={index * 90}>
@@ -23,10 +23,10 @@ export default function PilotSection({ content }: PilotSectionProps) {
             </Reveal>
           ))}
         </div>
-        <Reveal delay={240} className="flex items-stretch">
-          <div className="flex w-full flex-col justify-between rounded-[2rem] bg-cream p-8">
+        <Reveal delay={240} className="mx-auto flex w-full max-w-4xl items-stretch">
+          <div className="flex w-full flex-col justify-between rounded-[2rem] bg-cream p-8 text-center md:p-12">
             <p className="text-sm uppercase tracking-[0.28em] text-green">{content.eyebrow}</p>
-            <p className="mt-6 font-serif text-3xl leading-relaxed text-charcoal">“{content.villageQuote}”</p>
+            <p className="mt-6 font-serif text-3xl leading-snug text-charcoal md:text-4xl">“{content.villageQuote}”</p>
           </div>
         </Reveal>
       </div>

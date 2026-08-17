@@ -5,6 +5,7 @@ import type { LanguageCode } from '../content/index.ts'
 export default function Header() {
   const { content, language, setLanguage } = useLanguage()
   const [isOpen, setIsOpen] = useState(false)
+  const mobileMenuText = language === 'eu' ? 'Menua' : 'Menú'
 
   const handleLanguageChange = (nextLanguage: LanguageCode) => {
     setLanguage(nextLanguage)
@@ -18,12 +19,12 @@ export default function Header() {
         {/* Logo */}
         <a
           href="#top"
-          className="flex flex-col items-center gap-0.5 text-[.68rem] font-semibold leading-none tracking-[0.22em] text-green"
+          className="flex items-center gap-3 text-green"
           aria-label="PAIDEIA"
           onClick={() => setIsOpen(false)}
         >
-          <img src="/paideia/brand/paideia-mark.svg" alt="" width="42" height="42" className="h-10 w-10" />
-          <span>PAIDEIA</span>
+          <img src="/paideia/brand/paideia-mark.svg" alt="" width="44" height="44" className="h-11 w-11" />
+          <span className="font-serif text-xl tracking-[.18em]">PAIDEIA</span>
         </a>
 
         {/* Mobile menu button */}
@@ -39,7 +40,7 @@ export default function Header() {
           className="inline-flex rounded-full border border-stone/40 px-4 py-2 text-sm text-charcoal md:hidden"
           onClick={() => setIsOpen((open) => !open)}
         >
-          {isOpen ? '×' : content.header.menuLabel}
+          {isOpen ? '×' : mobileMenuText}
         </button>
 
         <div className="hidden items-center gap-5 md:flex">

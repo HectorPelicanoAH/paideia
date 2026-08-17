@@ -11,7 +11,7 @@ export default function LearningSection({ content }: LearningSectionProps) {
   return (
     <Section id="learning" background="white" eyebrow={content.eyebrow} title={content.title} intro={content.intro}>
       <EditorialImage image="learning" src="/paideia/images/aprender-haciendo.webp" width={1448} height={1086} className="aspect-[16/7]" imageClassName="object-[center_58%]" />
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
         {content.steps.map((step, index) => (
           <Reveal key={step.title} delay={index * 80}>
             <article className="h-full rounded-[2rem] border border-stone/20 bg-cream p-8">
