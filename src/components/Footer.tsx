@@ -30,7 +30,6 @@ export default function Footer({ content }: FooterProps) {
           </div>
           <div>
             <p className="text-sm uppercase tracking-[0.28em] text-cream/60">PAIDEIA</p>
-            <p className="mt-4 text-sm leading-7 text-cream/80">{content.footer.madeFor}</p>
             <p className="mt-6 text-sm text-cream/60">© {new Date().getFullYear()} · {content.footer.rights}</p>
           </div>
         </div>
