@@ -23,6 +23,7 @@ export default function Section({
     <section id={id} className={`${backgroundClass} scroll-mt-24 py-20 md:py-28`}>
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-12 px-5 sm:px-8 lg:px-12">
         <Reveal className="max-w-3xl">
+          <div className="mb-5 h-px w-14 bg-warm" aria-hidden="true" />
           <p className="mb-4 text-sm font-medium uppercase tracking-[0.32em] text-green">
             {eyebrow}
           </p>

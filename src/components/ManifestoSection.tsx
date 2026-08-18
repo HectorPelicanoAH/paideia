@@ -8,7 +8,7 @@ interface ManifestoSectionProps {
 
 export default function ManifestoSection({ content }: ManifestoSectionProps) {
   return (
-    <Section id="manifesto" background="white" eyebrow={content.eyebrow} title={content.title} intro={content.intro}>
+    <Section id="manifesto" background="cream" eyebrow={content.eyebrow} title={content.title} intro={content.intro}>
       <div className="grid gap-4">
         {content.beliefs.map((belief, index) => (
           <Reveal key={belief} delay={index * 70}>

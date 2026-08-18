@@ -1,6 +1,7 @@
 import type { SiteContent } from '../content/index.ts'
 import Reveal from './Reveal.tsx'
 import Section from './Section.tsx'
+import EditorialImage from './EditorialImage.tsx'
 
 interface EconomySectionProps {
   content: SiteContent['economy']
@@ -8,8 +9,10 @@ interface EconomySectionProps {
 
 export default function EconomySection({ content }: EconomySectionProps) {
   return (
-    <Section id="economy" background="cream" eyebrow={content.eyebrow} title={content.title} intro={content.intro}>
-      <div className="grid gap-6 md:grid-cols-2">
+    <Section id="economy" background="white" eyebrow={content.eyebrow} title={content.title} intro={content.intro}>
+      <div className="grid items-stretch gap-8 xl:grid-cols-[minmax(360px,.9fr)_minmax(0,1.1fr)]">
+      <EditorialImage image="economy" src="/paideia/images/economia-local.webp" width={1448} height={1086} className="min-h-[460px]" />
+      <div className="grid gap-6">
         {content.models.map((model, index) => (
           <Reveal key={model.title} delay={index * 90}>
             <article className="h-full rounded-[2rem] border border-stone/20 bg-white p-8">
@@ -18,6 +21,7 @@ export default function EconomySection({ content }: EconomySectionProps) {
             </article>
           </Reveal>
         ))}
+      </div>
       </div>
       <Reveal delay={220}>
         <p className="max-w-3xl text-lg leading-8 text-charcoal">{content.closing}</p>

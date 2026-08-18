@@ -8,11 +8,11 @@ interface TechnologySectionProps {
 
 export default function TechnologySection({ content }: TechnologySectionProps) {
   return (
-    <Section id="technology" background="white" eyebrow={content.eyebrow} title={content.title} intro={content.intro}>
+    <Section id="technology" background="cream" eyebrow={content.eyebrow} title={content.title} intro={content.intro}>
       <Reveal>
         <p className="max-w-4xl text-lg leading-8 text-charcoal">{content.positioning}</p>
       </Reveal>
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
         {content.principles.map((principle, index) => (
           <Reveal key={principle.title} delay={index * 90} className="flex">
             <article className="flex flex-1 flex-col rounded-[2rem] border border-stone/20 bg-cream p-6 sm:p-8">
