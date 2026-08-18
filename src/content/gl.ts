@@ -225,24 +225,24 @@ const gl: SiteContent = {
   },
   masters: {
     eyebrow: 'Mestres',
-    title: 'Quen sabe facer, pode ensinar.',
+    title: 'Todas as persoas temos algo que aprender e algo que ensinar.',
     intro:
-      'Os mestres de PAIDEIA non son só persoas tituladas. Son persoas cun saber incorporado, criterio, paciencia e vontade de o transmitir.',
+      'En PAIDEIA, mestre é quen ten un coñecemento que paga a pena compartir. Pode vir dun oficio, de anos de experiencia, dunha profesión, dunha afección ou de algo aprendido de quen estivo antes.',
     profiles: [
       {
-        title: 'Oficio e experiencia',
-        text: 'Labregas, carpinteiros, cociñeiras, gandeiros, albaneis, artesás, bibliotecarias ou persoas que coñecen ben un proceso concreto.',
+        title: 'Coñecementos que forman parte da vida',
+        text: 'Cultivar a terra, podar unha árbore, levantar un muro, cociñar, coser, reparar, traballar a madeira, coñecer o bosque, utilizar unha ferramenta ou comprender unha tecnoloxía.',
       },
       {
-        title: 'Pedagoxía de proximidade',
-        text: 'Ensinar aquí é acompañar desde a práctica: mostrar, corrixir, confiar, dar tempo e facerlle sitio á repetición.',
+        title: 'Compartir e seguir aprendendo',
+        text: 'Non buscamos profesores. Buscamos persoas dispostas a compartir o que saben e a seguir aprendendo das demais.',
       },
       {
-        title: 'Autoridade compartida',
-        text: 'O mestre non é unha figura distante. Forma parte da vida común e transmite tamén unha maneira de estar, de falar e de responder diante da dificultade.',
+        title: 'Un coñecemento que segue circulando',
+        text: 'Quen aprende hoxe pode, coa práctica e a experiencia, transmitir mañá ese coñecemento a outras persoas.',
       },
     ],
-    closing: 'Cremos que os pobos gardan coñecementos que non deberían desaparecer.',
+    closing: 'Recibir → practicar → comprender → achegar → transmitir.',
   },
   economy: {
     eyebrow: 'Economía e produción',
@@ -307,10 +307,10 @@ const gl: SiteContent = {
         cta: 'Falar do piloto',
       },
       {
-        title: 'Son Mestre',
+        title: 'Quero compartir o que sei',
         prompt: 'Teño algo que ensinar.',
         description: 'Quero transmitir un saber práctico ou cultural e formar parte dunha comunidade que o valore e o faga medrar.',
-        cta: 'Compartir o meu oficio',
+        cta: 'Quero compartir o que sei',
       },
       {
         title: 'Quero Participar',

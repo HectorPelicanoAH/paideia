@@ -225,24 +225,24 @@ const eu: SiteContent = {
   },
   masters: {
     eyebrow: 'Maisuak',
-    title: 'Egiten dakienak irakats dezake.',
+    title: 'Denok dugu zerbait ikasteko eta zerbait irakasteko.',
     intro:
-      'PAIDEIAko maisuak ez dira tituludun adituak bakarrik. Jakintza gorpuztua, irizpidea, pazientzia eta transmititzeko gogoa duten pertsonak dira.',
+      'PAIDEIAn, partekatzea merezi duen ezagutza duen edonor da maisu. Ogibide batetik, urteetako esperientziatik, lanbidetik, zaletasunetik edo aurrekoengandik ikasitakotik etor daiteke.',
     profiles: [
       {
-        title: 'Ofizioa eta esperientzia',
-        text: 'Nekazariak, arotzak, sukaldariak, abeltzainak, igeltseroak, artisauak, liburuzainak edo prozesu jakin bat ondo ezagutzen duten pertsonak.',
+        title: 'Bizitzaren parte diren ezagutzak',
+        text: 'Lurra lantzea, zuhaitza inaustea, horma eraikitzea, sukaldatzea, jostea, konpontzea, egurra lantzea, basoa ezagutzea, tresna bat erabiltzea edo teknologia bat ulertzea.',
       },
       {
-        title: 'Hurbileko pedagogia',
-        text: 'Hemen irakastea praktikatik laguntzea da: erakutsi, zuzendu, konfiantza eman, denbora eskaini eta errepikapenari lekua egitea.',
+        title: 'Partekatu eta ikasten jarraitu',
+        text: 'Ez gara irakasle bila ari. Dakitena partekatzeko eta besteengandik ikasten jarraitzeko prest dauden pertsonak bilatzen ditugu.',
       },
       {
-        title: 'Partekatutako autoritatea',
-        text: 'Maisua ez da urruneko figura bat. Bizitza komunean parte hartzen du eta egoteko, hitz egiteko eta zailtasunari erantzuteko modu bat ere transmititzen du.',
+        title: 'Zirkulatzen jarraitzen duen ezagutza',
+        text: 'Gaur ikasten duenak, praktikarekin eta esperientziarekin, ezagutza hori beste batzuei transmititu ahal izango die bihar.',
       },
     ],
-    closing: 'Herriek galdu behar ez liratekeen jakintzak gordetzen dituztela sinesten dugu.',
+    closing: 'Jaso → praktikatu → ulertu → ekarpena egin → transmititu.',
   },
   economy: {
     eyebrow: 'Ekonomia eta ekoizpena',
@@ -307,10 +307,10 @@ const eu: SiteContent = {
         cta: 'Pilotuaz hitz egin',
       },
       {
-        title: 'Maisua naiz',
+        title: 'Dakidana partekatu nahi dut',
         prompt: 'Irakasteko zerbait daukat.',
         description: 'Jakintza praktiko edo kulturala transmititu nahi dut, hura balioetsi eta haziko duen komunitate baten parte izanez.',
-        cta: 'Nire ofizioa partekatu',
+        cta: 'Dakidana partekatu nahi dut',
       },
       {
         title: 'Parte hartu nahi dut',
