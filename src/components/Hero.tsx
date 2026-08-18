@@ -57,7 +57,7 @@ export default function Hero({ content }: HeroProps) {
         </Reveal>
 
         <Reveal delay={180} className="relative">
-          <EditorialImage image="hero" src="/paideia/images/hero-aprender-haciendo.webp" width={1536} height={1024} priority className="aspect-[4/5] shadow-[0_28px_90px_rgba(41,40,36,.16)] sm:aspect-[3/2] lg:aspect-[4/5]" imageClassName="object-[66%_center]" />
+          <EditorialImage image="hero" src="/paideia/images/hero-aprender-haciendo-v2.webp" width={1536} height={1024} priority className="aspect-[4/5] shadow-[0_28px_90px_rgba(41,40,36,.16)] sm:aspect-[3/2] lg:aspect-[4/5]" imageClassName="object-[66%_center]" />
           <aside className="relative -mt-16 ml-5 max-w-md rounded-[1.5rem] border border-stone/30 bg-white/95 p-6 shadow-xl backdrop-blur sm:ml-10 lg:absolute lg:-bottom-8 lg:-left-14 lg:mt-0">
             <p className="font-serif text-xl leading-relaxed text-charcoal">“{content.asideQuote}”</p>
           </aside>
