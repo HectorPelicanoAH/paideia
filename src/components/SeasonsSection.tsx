@@ -8,7 +8,7 @@ interface SeasonsSectionProps {
 
 export default function SeasonsSection({ content }: SeasonsSectionProps) {
   return (
-    <Section id="seasons" background="cream" eyebrow={content.eyebrow} title={content.title} intro={content.intro}>
+    <Section id="seasons" background="white" eyebrow={content.eyebrow} title={content.title} intro={content.intro}>
       <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
         {content.seasons.map((season, index) => (
           <Reveal key={season.name} delay={index * 90}>

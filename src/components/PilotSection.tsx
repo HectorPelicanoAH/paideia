@@ -9,7 +9,7 @@ interface PilotSectionProps {
 
 export default function PilotSection({ content }: PilotSectionProps) {
   return (
-    <Section id="pilot" background="white" eyebrow={content.eyebrow} title={content.title} intro={content.intro}>
+    <Section id="pilot" background="cream" eyebrow={content.eyebrow} title={content.title} intro={content.intro}>
       <EditorialImage image="pilot" src="/paideia/images/proyecto-piloto.webp" width={1448} height={1086} className="aspect-[16/8]" imageClassName="object-[center_58%]" />
       <div className="grid gap-6">
         <div className="grid gap-6 md:grid-cols-2">

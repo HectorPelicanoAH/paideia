@@ -9,7 +9,7 @@ interface EconomySectionProps {
 
 export default function EconomySection({ content }: EconomySectionProps) {
   return (
-    <Section id="economy" background="cream" eyebrow={content.eyebrow} title={content.title} intro={content.intro}>
+    <Section id="economy" background="white" eyebrow={content.eyebrow} title={content.title} intro={content.intro}>
       <div className="grid items-stretch gap-8 xl:grid-cols-[minmax(360px,.9fr)_minmax(0,1.1fr)]">
       <EditorialImage image="economy" src="/paideia/images/economia-local.webp" width={1448} height={1086} className="min-h-[460px]" />
       <div className="grid gap-6">

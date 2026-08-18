@@ -9,7 +9,7 @@ interface ParticipateSectionProps {
 
 export default function ParticipateSection({ content }: ParticipateSectionProps) {
   return (
-    <Section id="participate" background="cream" eyebrow={content.eyebrow} title={content.title} intro={content.intro}>
+    <Section id="participate" background="white" eyebrow={content.eyebrow} title={content.title} intro={content.intro}>
       <EditorialImage image="participate" src="/paideia/images/participacion.webp" width={1536} height={1024} className="aspect-[16/7]" />
       <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
         {content.cards.map((card, index) => (

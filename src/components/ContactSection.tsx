@@ -87,7 +87,7 @@ export default function ContactSection({ content }: ContactSectionProps) {
   }
 
   return (
-    <Section id="contact" background="cream" eyebrow={content.eyebrow} title={content.title} intro={content.intro}>
+    <Section id="contact" background="white" eyebrow={content.eyebrow} title={content.title} intro={content.intro}>
       <div className="mx-auto max-w-4xl">
         <Reveal>
           <form

@@ -8,7 +8,7 @@ interface TechnologySectionProps {
 
 export default function TechnologySection({ content }: TechnologySectionProps) {
   return (
-    <Section id="technology" background="white" eyebrow={content.eyebrow} title={content.title} intro={content.intro}>
+    <Section id="technology" background="cream" eyebrow={content.eyebrow} title={content.title} intro={content.intro}>
       <Reveal>
         <p className="max-w-4xl text-lg leading-8 text-charcoal">{content.positioning}</p>
       </Reveal>
