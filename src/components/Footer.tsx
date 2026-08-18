@@ -10,7 +10,9 @@ export default function Footer({ content }: FooterProps) {
       <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[minmax(0,1fr)_minmax(320px,0.9fr)] lg:px-12">
         <div>
           <a href="#top" className="inline-flex items-center gap-4 font-serif text-3xl tracking-[0.16em] text-cream">
-            <img src="/paideia/brand/paideia-mark-negative.svg" alt="" width="60" height="60" className="h-15 w-15 rounded-2xl" />
+            <span className="inline-flex rounded-2xl bg-cream p-2" aria-hidden="true">
+              <img src="/paideia/brand/paideia-mark.svg" alt="" width="48" height="48" className="h-12 w-12" />
+            </span>
             <span>PAIDEIA</span>
           </a>
           <p className="mt-5 max-w-xl text-lg leading-8 text-cream/80">{content.footer.tagline}</p>
