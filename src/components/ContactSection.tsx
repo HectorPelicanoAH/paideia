@@ -113,13 +113,28 @@ export default function ContactSection({ content }: ContactSectionProps) {
             <div className="mt-6 grid gap-6 md:grid-cols-2">
               <label className="block text-sm font-medium text-charcoal">
                 {content.form.roleLabel}
-                <select className={fieldClasses} name="role" defaultValue="participant" required>
-                  {content.form.roleOptions.map((option) => (
-                    <option key={option.value} value={option.value}>
-                      {option.label}
-                    </option>
-                  ))}
-                </select>
+                <span className="relative block">
+                  <select
+                    className={`${fieldClasses} appearance-none pr-12`}
+                    name="role"
+                    defaultValue="participant"
+                    required
+                  >
+                    {content.form.roleOptions.map((option) => (
+                      <option key={option.value} value={option.value}>
+                        {option.label}
+                      </option>
+                    ))}
+                  </select>
+                  <svg
+                    aria-hidden="true"
+                    className="pointer-events-none absolute right-4 top-1/2 mt-1 size-4 -translate-y-1/2 text-earth"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                  >
+                    <path d="m5 7.5 5 5 5-5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
               </label>
               <label className="block text-sm font-medium text-charcoal">
                 {content.form.municipalityLabel}
