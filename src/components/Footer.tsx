@@ -33,6 +33,20 @@ export default function Footer({ content }: FooterProps) {
           </div>
           <div>
             <p className="text-sm uppercase tracking-[0.28em] text-cream/60">PAIDEIA</p>
+            <a
+              href="https://www.instagram.com/sumuspaideia/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram · @sumuspaideia"
+              className="mt-5 inline-flex items-center gap-3 rounded-full border border-cream/20 px-4 py-2.5 text-sm font-medium text-cream/80 transition hover:border-cream/50 hover:bg-cream/10 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cream/70"
+            >
+              <svg aria-hidden="true" className="size-5" viewBox="0 0 24 24" fill="none">
+                <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" strokeWidth="1.8" />
+                <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="1.8" />
+                <circle cx="17.4" cy="6.7" r="1" fill="currentColor" />
+              </svg>
+              <span>@sumuspaideia</span>
+            </a>
             <p className="mt-6 text-sm text-cream/60">© {new Date().getFullYear()} · {content.footer.rights}</p>
           </div>
         </div>
