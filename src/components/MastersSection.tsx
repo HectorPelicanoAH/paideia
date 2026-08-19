@@ -15,7 +15,7 @@ export default function MastersSection({ content }: MastersSectionProps) {
         <div className="grid gap-6">
         {content.profiles.map((profile, index) => (
           <Reveal key={profile.title} delay={index * 100}>
-            <article className="h-full rounded-[2rem] bg-cream p-8">
+            <article className="h-full rounded-[2rem] border border-stone/20 bg-white p-8">
               <h3 className="font-serif text-2xl text-charcoal">{profile.title}</h3>
               <p className="mt-4 leading-8 text-earth">{profile.text}</p>
             </article>

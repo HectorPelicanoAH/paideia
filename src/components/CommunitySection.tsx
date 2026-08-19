@@ -14,7 +14,7 @@ export default function CommunitySection({ content }: CommunitySectionProps) {
       <div className="grid gap-6 md:grid-cols-3">
           {content.pillars.map((pillar, index) => (
             <Reveal key={pillar.title} delay={index * 100}>
-              <article className="h-full rounded-[2rem] border border-stone/20 p-8">
+              <article className="h-full rounded-[2rem] border border-stone/20 bg-white p-8">
                 <h3 className="font-serif text-2xl text-charcoal">{pillar.title}</h3>
                 <p className="mt-4 leading-8 text-earth">{pillar.text}</p>
               </article>

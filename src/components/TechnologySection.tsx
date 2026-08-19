@@ -15,7 +15,7 @@ export default function TechnologySection({ content }: TechnologySectionProps) {
       <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
         {content.principles.map((principle, index) => (
           <Reveal key={principle.title} delay={index * 90} className="flex">
-            <article className="flex flex-1 flex-col rounded-[2rem] border border-stone/20 bg-cream p-6 sm:p-8">
+            <article className="flex flex-1 flex-col rounded-[2rem] border border-stone/20 bg-white p-6 sm:p-8">
               <h3 className="font-serif text-xl text-charcoal sm:text-2xl">{principle.title}</h3>
               <p className="mt-4 leading-7 text-earth">{principle.text}</p>
             </article>
@@ -23,7 +23,7 @@ export default function TechnologySection({ content }: TechnologySectionProps) {
         ))}
       </div>
       <Reveal delay={240}>
-        <div className="rounded-[2rem] border border-green/20 bg-cream p-6 sm:p-8">
+        <div className="rounded-[2rem] border border-green/20 bg-white p-6 sm:p-8">
           <p className="text-base leading-8 text-charcoal sm:text-lg">{content.mainMessage}</p>
           <p className="mt-4 font-serif text-xl leading-8 text-charcoal sm:mt-6 sm:text-2xl sm:leading-9">
             "{content.featuredQuote}"
