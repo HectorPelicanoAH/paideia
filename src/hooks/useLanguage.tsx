@@ -20,7 +20,7 @@ const LanguageContext = createContext<LanguageContextValue | null>(null)
 
 const detectLanguage = (): LanguageCode => {
   if (typeof window === 'undefined') {
-    return 'ca'
+    return 'es'
   }
 
   const stored = window.localStorage.getItem(STORAGE_KEY)
@@ -28,12 +28,7 @@ const detectLanguage = (): LanguageCode => {
     return stored
   }
 
-  const browserLanguage = window.navigator.language.slice(0, 2)
-  if (browserLanguage === 'ca' || browserLanguage === 'es' || browserLanguage === 'eu' || browserLanguage === 'gl') {
-    return browserLanguage
-  }
-
-  return 'ca'
+  return 'es'
 }
 
 export function LanguageProvider({ children }: PropsWithChildren) {
