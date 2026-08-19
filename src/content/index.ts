@@ -63,6 +63,7 @@ export interface SiteContent {
     title: string
     subtitle: string
     description: string
+    signals: string[]
     primaryCta: string
     secondaryCta: string
     asideQuote: string

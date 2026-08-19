@@ -40,6 +40,14 @@ export default function Hero({ content }: HeroProps) {
             {content.subtitle}
           </p>
           <p className="mt-8 max-w-2xl text-lg leading-8 text-earth">{content.description}</p>
+          <ul className="mt-7 flex flex-wrap gap-x-6 gap-y-3" aria-label={content.subtitle}>
+            {content.signals.map((signal) => (
+              <li key={signal} className="flex items-center gap-2 text-sm font-semibold text-charcoal">
+                <span className="h-2 w-2 rounded-full bg-warm" aria-hidden="true" />
+                {signal}
+              </li>
+            ))}
+          </ul>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <a
               href="#participate"
@@ -48,7 +56,7 @@ export default function Hero({ content }: HeroProps) {
               {content.primaryCta}
             </a>
             <a
-              href="#pilot"
+              href="#what"
               className="inline-flex items-center justify-center rounded-full border border-earth/30 px-6 py-4 text-sm font-semibold text-charcoal transition hover:border-green hover:text-green"
             >
               {content.secondaryCta}

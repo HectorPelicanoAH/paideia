@@ -21,8 +21,8 @@ const es: SiteContent = {
   header: {
     homeLabel: 'Ir al inicio',
     nav: [
-      { label: 'Por qué', href: '#why' },
       { label: 'Qué es', href: '#what' },
+      { label: 'Por qué', href: '#why' },
       { label: 'Aprender haciendo', href: '#learning' },
       { label: 'Tecnología y vida', href: '#technology' },
       { label: 'Ritmo estacional', href: '#seasons' },
@@ -43,11 +43,12 @@ const es: SiteContent = {
   hero: {
     eyebrow: 'ARRAIGADOS AL TERRITORIO · ABIERTOS AL FUTURO',
     title: 'PAIDEIA',
-    subtitle: 'Una comunidad para aprender a vivir.',
+    subtitle: 'Aprender, trabajar y vivir en comunidad en un pueblo pequeño.',
     description:
-      'Un lugar donde aprender haciendo, recuperar saberes, contribuir a una comunidad y transmitir lo aprendido.',
+      'PAIDEIA conecta a personas de distintas generaciones para aprender haciendo y responder a necesidades reales del territorio.',
+    signals: ['Aprendizaje práctico', 'Vida en comunidad', 'Contribución local'],
     primaryCta: 'Quiero formar parte',
-    secondaryCta: 'Conocer el proyecto',
+    secondaryCta: 'Ver cómo funciona',
     asideQuote: 'El pueblo no sería el escenario de PAIDEIA. Sería parte de ella.',
   },
   why: {
@@ -65,9 +66,9 @@ const es: SiteContent = {
   },
   what: {
     eyebrow: 'Qué es PAIDEIA',
-    title: 'No es una escuela. No es turismo. No es una ONG.',
+    title: 'Una comunidad que aprende haciendo y contribuye al lugar que habita.',
     intro:
-      'PAIDEIA es una comunidad de aprendizaje y producción arraigada al territorio. Una forma de organizar la vida cotidiana para que aprender, trabajar, cuidar y convivir vuelvan a estar conectados.',
+      'Personas jóvenes, adultas y mayores comparten vida cotidiana, oficios y responsabilidades en un pueblo pequeño. Lo que aprenden se convierte en trabajo útil para la comunidad y el territorio.',
     points: [
       {
         title: 'Una idea de vida',
