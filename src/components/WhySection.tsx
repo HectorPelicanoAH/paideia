@@ -18,7 +18,7 @@ export default function WhySection({ content }: WhySectionProps) {
           ))}
         </div>
         <Reveal delay={220}>
-          <div className="rounded-[2rem] bg-cream p-8 lg:p-10">
+          <div className="rounded-[2rem] border border-stone/20 bg-white p-8 lg:p-10">
             <p className="font-serif text-2xl leading-relaxed text-charcoal md:text-3xl">“{content.pullQuote}”</p>
           </div>
         </Reveal>
