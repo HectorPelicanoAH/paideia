@@ -234,12 +234,12 @@ const gl: SiteContent = {
         text: 'Cultivar a terra, podar unha árbore, levantar un muro, cociñar, coser, reparar, traballar a madeira, coñecer o bosque, utilizar unha ferramenta ou comprender unha tecnoloxía.',
       },
       {
-        title: 'Compartir e seguir aprendendo',
-        text: 'Non buscamos profesores. Buscamos persoas dispostas a compartir o que saben e a seguir aprendendo das demais.',
+        title: 'Pedagoxía de proximidade',
+        text: 'Ensinar aquí é acompañar desde a práctica: mostrar, corrixir, confiar, dar tempo e facerlle sitio á repetición.',
       },
       {
-        title: 'Un coñecemento que segue circulando',
-        text: 'Quen aprende hoxe pode, coa práctica e a experiencia, transmitir mañá ese coñecemento a outras persoas.',
+        title: 'Autoridade compartida',
+        text: 'O mestre non é unha figura distante. Forma parte da vida común e transmite tamén unha maneira de estar, de falar e de responder diante da dificultade.',
       },
     ],
     closing: 'Recibir → practicar → comprender → achegar → transmitir.',

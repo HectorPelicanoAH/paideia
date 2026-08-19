@@ -234,12 +234,12 @@ const eu: SiteContent = {
         text: 'Lurra lantzea, zuhaitza inaustea, horma eraikitzea, sukaldatzea, jostea, konpontzea, egurra lantzea, basoa ezagutzea, tresna bat erabiltzea edo teknologia bat ulertzea.',
       },
       {
-        title: 'Partekatu eta ikasten jarraitu',
-        text: 'Ez gara irakasle bila ari. Dakitena partekatzeko eta besteengandik ikasten jarraitzeko prest dauden pertsonak bilatzen ditugu.',
+        title: 'Hurbileko pedagogia',
+        text: 'Hemen irakastea praktikatik laguntzea da: erakutsi, zuzendu, konfiantza eman, denbora eskaini eta errepikapenari lekua egitea.',
       },
       {
-        title: 'Zirkulatzen jarraitzen duen ezagutza',
-        text: 'Gaur ikasten duenak, praktikarekin eta esperientziarekin, ezagutza hori beste batzuei transmititu ahal izango die bihar.',
+        title: 'Partekatutako autoritatea',
+        text: 'Maisua ez da urruneko figura bat. Bizitza komunean parte hartzen du eta egoteko, hitz egiteko eta zailtasunari erantzuteko modu bat ere transmititzen du.',
       },
     ],
     closing: 'Jaso → praktikatu → ulertu → ekarpena egin → transmititu.',

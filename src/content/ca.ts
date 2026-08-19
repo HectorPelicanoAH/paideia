@@ -234,12 +234,12 @@ const ca: SiteContent = {
         text: 'Conrear la terra, podar un arbre, aixecar un mur, cuinar, cosir, reparar, treballar la fusta, conèixer el bosc, fer servir una eina o comprendre una tecnologia.',
       },
       {
-        title: 'Compartir i continuar aprenent',
-        text: 'No busquem professors. Busquem persones disposades a compartir allò que saben i a continuar aprenent dels altres.',
+        title: 'Pedagogia de la proximitat',
+        text: 'Ensenyar aquí és acompanyar des de la pràctica: mostrar, corregir, confiar, donar temps i fer lloc a la repetició.',
       },
       {
-        title: 'Un coneixement que continua circulant',
-        text: 'Qui avui aprèn pot, amb pràctica i experiència, transmetre demà aquest coneixement a altres persones.',
+        title: 'Autoritat compartida',
+        text: 'El mestre no és una figura distant. Forma part de la vida comuna i transmet també una manera d’estar, de parlar i de respondre davant la dificultat.',
       },
     ],
     closing: 'Rebre → practicar → comprendre → aportar → transmetre.',
