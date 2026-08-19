@@ -10,7 +10,7 @@ interface CommunitySectionProps {
 export default function CommunitySection({ content }: CommunitySectionProps) {
   return (
     <Section id="community" background="cream" eyebrow={content.eyebrow} title={content.title} intro={content.intro}>
-      <EditorialImage image="community" src="/paideia/images/comunidad.webp" width={1536} height={1024} className="aspect-[16/7]" />
+      <EditorialImage image="community" src="/paideia/images/comunidad-v2.jpg" width={1536} height={1024} className="aspect-[16/7]" />
       <div className="grid gap-6 md:grid-cols-3">
           {content.pillars.map((pillar, index) => (
             <Reveal key={pillar.title} delay={index * 100}>
