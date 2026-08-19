@@ -8,7 +8,7 @@ interface WhatSectionProps {
 
 export default function WhatSection({ content }: WhatSectionProps) {
   return (
-    <Section id="what" background="cream" eyebrow={content.eyebrow} title={content.title} intro={content.intro}>
+    <Section id="what" background="white" eyebrow={content.eyebrow} title={content.title} intro={content.intro}>
       <div className="grid gap-6 md:grid-cols-2">
         {content.points.map((point, index) => (
           <Reveal key={point.title} delay={index * 90}>
