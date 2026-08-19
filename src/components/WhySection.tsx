@@ -8,7 +8,7 @@ interface WhySectionProps {
 
 export default function WhySection({ content }: WhySectionProps) {
   return (
-    <Section id="why" background="white" eyebrow={content.eyebrow} title={content.title} intro={content.intro}>
+    <Section id="why" background="cream" eyebrow={content.eyebrow} title={content.title} intro={content.intro}>
       <div className="grid gap-8 lg:grid-cols-[minmax(0,1.2fr)_minmax(280px,0.8fr)]">
         <div className="space-y-6">
           {content.paragraphs.map((paragraph, index) => (
@@ -18,7 +18,7 @@ export default function WhySection({ content }: WhySectionProps) {
           ))}
         </div>
         <Reveal delay={220}>
-          <div className="rounded-[2rem] bg-cream p-8 lg:p-10">
+          <div className="rounded-[2rem] border border-stone/20 bg-white p-8 lg:p-10">
             <p className="font-serif text-2xl leading-relaxed text-charcoal md:text-3xl">“{content.pullQuote}”</p>
           </div>
         </Reveal>

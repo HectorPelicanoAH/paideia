@@ -12,7 +12,7 @@ export default function ManifestoSection({ content }: ManifestoSectionProps) {
       <div className="grid gap-4">
         {content.beliefs.map((belief, index) => (
           <Reveal key={belief} delay={index * 70}>
-            <div className="rounded-[1.75rem] border border-stone/20 bg-cream px-6 py-5 md:px-8">
+            <div className="rounded-[1.75rem] border border-stone/20 bg-white px-6 py-5 md:px-8">
               <p className="text-lg leading-8 text-charcoal md:text-xl">{belief}</p>
             </div>
           </Reveal>

@@ -22,7 +22,7 @@ export default function TerritorySection({ content }: TerritorySectionProps) {
         <div className="grid gap-4">
           {content.stats.map((stat, index) => (
             <Reveal key={stat.value} delay={index * 90}>
-              <article className="rounded-[1.75rem] border border-stone/20 bg-white p-6">
+              <article className="rounded-[1.75rem] border border-stone/20 bg-cream p-6">
                 <p className="text-sm uppercase tracking-[0.26em] text-green">{stat.value}</p>
                 <h3 className="mt-3 font-serif text-2xl text-charcoal">{stat.label}</h3>
                 <p className="mt-3 leading-7 text-earth">{stat.description}</p>

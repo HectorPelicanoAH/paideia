@@ -21,8 +21,8 @@ const ca: SiteContent = {
   header: {
     homeLabel: 'Anar a l’inici',
     nav: [
-      { label: 'Per què', href: '#why' },
       { label: 'Què és', href: '#what' },
+      { label: 'Per què', href: '#why' },
       { label: 'Aprendre fent', href: '#learning' },
       { label: 'Tecnologia i vida', href: '#technology' },
       { label: 'Ritme estacional', href: '#seasons' },
@@ -43,11 +43,12 @@ const ca: SiteContent = {
   hero: {
     eyebrow: 'ARRELATS AL TERRITORI · OBERTS AL FUTUR',
     title: 'PAIDEIA',
-    subtitle: 'Una comunitat per aprendre a viure.',
+    subtitle: 'Aprendre, treballar i viure en comunitat en un poble petit.',
     description:
-      'Un lloc on aprendre fent, recuperar coneixements, contribuir a una comunitat i transmetre allò que hem après.',
+      'PAIDEIA connecta persones de diferents generacions per aprendre fent i respondre a necessitats reals del territori.',
+    signals: ['Aprenentatge pràctic', 'Vida en comunitat', 'Contribució local'],
     primaryCta: 'Vull formar-ne part',
-    secondaryCta: 'Conèixer el projecte',
+    secondaryCta: 'Veure com funciona',
     asideQuote: 'El poble no seria l’escenari de PAIDEIA. Seria part d’ella.',
   },
   why: {
@@ -65,9 +66,9 @@ const ca: SiteContent = {
   },
   what: {
     eyebrow: 'Què és PAIDEIA',
-    title: 'No és una escola. No és turisme. No és una ONG.',
+    title: 'Una comunitat que aprèn fent i contribueix al lloc que habita.',
     intro:
-      'PAIDEIA és una comunitat d’aprenentatge i producció arrelada al territori. Una forma d’organitzar la vida quotidiana perquè aprendre, treballar, cuidar i conviure tornin a estar connectats.',
+      'Persones joves, adultes i grans comparteixen vida quotidiana, oficis i responsabilitats en un poble petit. Allò que aprenen es converteix en treball útil per a la comunitat i el territori.',
     points: [
       {
         title: 'Una idea de vida',

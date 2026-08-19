@@ -21,8 +21,8 @@ const eu: SiteContent = {
   header: {
     homeLabel: 'Hasierara joan',
     nav: [
-      { label: 'Zergatik', href: '#why' },
       { label: 'Zer da', href: '#what' },
+      { label: 'Zergatik', href: '#why' },
       { label: 'Eginez ikasi', href: '#learning' },
       { label: 'Teknologia eta bizitza', href: '#technology' },
       { label: 'Urtaroen erritmoa', href: '#seasons' },
@@ -43,11 +43,12 @@ const eu: SiteContent = {
   hero: {
     eyebrow: 'LURRALDEARI ERROTUTA · ETORKIZUNARI IREKITA',
     title: 'PAIDEIA',
-    subtitle: 'Bizitzen ikasteko komunitate bat.',
+    subtitle: 'Herri txiki batean, komunitatean ikasi, lan egin eta bizi.',
     description:
-      'Eginez ikasteko, jakintzak berreskuratzeko, komunitate bati ekarpena egiteko eta ikasitakoa besteekin partekatzeko tokia.',
+      'PAIDEIAk belaunaldi desberdinetako pertsonak elkartzen ditu, eginez ikasteko eta lurraldearen benetako beharrei erantzuteko.',
+    signals: ['Ikaskuntza praktikoa', 'Komunitateko bizitza', 'Tokiko ekarpena'],
     primaryCta: 'Parte izan nahi dut',
-    secondaryCta: 'Proiektua ezagutu',
+    secondaryCta: 'Ikusi nola funtzionatzen duen',
     asideQuote: 'Herria ez litzateke PAIDEIAren agertokia izango. Bere parte izango litzateke.',
   },
   why: {
@@ -65,9 +66,9 @@ const eu: SiteContent = {
   },
   what: {
     eyebrow: 'Zer da PAIDEIA',
-    title: 'Ez da eskola bat. Ez da turismoa. Ez da GKE bat.',
+    title: 'Eginez ikasten duen eta bizi den tokiari ekarpena egiten dion komunitatea.',
     intro:
-      'PAIDEIA lurraldean errotutako ikaskuntza eta ekoizpen komunitatea da. Eguneroko bizitza antolatzeko modu bat, ikastea, lan egitea, zaintzea eta elkarrekin bizitzea berriro lotuta egon daitezen.',
+      'Gazteek, helduek eta adinekoek eguneroko bizitza, ogibideak eta erantzukizunak partekatzen dituzte herri txiki batean. Ikasten dutena komunitatearentzat eta lurraldearentzat lan baliagarri bihurtzen da.',
     points: [
       {
         title: 'Bizimodu bat',

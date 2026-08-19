@@ -91,7 +91,7 @@ export default function ContactSection({ content }: ContactSectionProps) {
       <div className="mx-auto max-w-4xl">
         <Reveal>
           <form
-            className="rounded-[2rem] bg-white p-8 shadow-[0_24px_80px_rgba(45,42,38,0.08)]"
+            className="rounded-[2rem] border border-stone/20 bg-cream p-8"
             onSubmit={handleSubmit}
           >
             <div className="grid gap-6 md:grid-cols-2">

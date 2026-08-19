@@ -52,8 +52,8 @@ export default function App() {
       <Header />
       <main id="main-content">
         <Hero content={content.hero} />
-        <WhySection content={content.why} />
         <WhatSection content={content.what} />
+        <WhySection content={content.why} />
         <LearningSection content={content.learning} />
         <TechnologySection content={content.technology} />
         <SeasonsSection content={content.seasons} />
