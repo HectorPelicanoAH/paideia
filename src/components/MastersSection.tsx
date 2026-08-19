@@ -11,7 +11,7 @@ export default function MastersSection({ content }: MastersSectionProps) {
   return (
     <Section id="masters" background="cream" eyebrow={content.eyebrow} title={content.title} intro={content.intro}>
       <div className="grid items-stretch gap-6 lg:grid-cols-[minmax(300px,.85fr)_minmax(0,1.15fr)]">
-        <EditorialImage image="masters" src="/paideia/images/maestros-transmision.webp" width={1448} height={1086} className="min-h-[440px]" />
+        <EditorialImage image="masters" src="/paideia/images/maestros-transmision-v2.jpg" width={1448} height={1086} className="min-h-[440px]" />
         <div className="grid gap-6">
         {content.profiles.map((profile, index) => (
           <Reveal key={profile.title} delay={index * 100}>
