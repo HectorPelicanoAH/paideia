@@ -225,13 +225,13 @@ const es: SiteContent = {
   },
   masters: {
     eyebrow: 'Maestros',
-    title: 'Quien sabe hacer, puede enseñar.',
+    title: 'Todos tenemos algo que aprender y algo que enseñar.',
     intro:
-      'Los maestros de PAIDEIA no son solo expertos con título. Son personas con un saber encarnado, criterio, paciencia y voluntad de transmitir.',
+      'En PAIDEIA, maestro es quien tiene un conocimiento que merece la pena compartir. Puede venir de un oficio, de años de experiencia, de una profesión, de una afición o de algo aprendido de quienes estuvieron antes.',
     profiles: [
       {
-        title: 'Oficio y experiencia',
-        text: 'Agricultoras, carpinteros, cocineras, ganaderos, albañiles, artesanas, bibliotecarios o personas que conocen bien un proceso concreto.',
+        title: 'Conocimientos que forman parte de la vida',
+        text: 'Cultivar una tierra, podar un árbol, levantar un muro, cocinar, coser, reparar, trabajar la madera, conocer el bosque, utilizar una herramienta o comprender una tecnología.',
       },
       {
         title: 'Pedagogía de proximidad',
@@ -242,7 +242,7 @@ const es: SiteContent = {
         text: 'El maestro no es una figura distante. Forma parte de la vida común y transmite también una manera de estar, de hablar y de responder ante la dificultad.',
       },
     ],
-    closing: 'Creemos que los pueblos conservan conocimientos que no deberían desaparecer.',
+    closing: 'Recibir → practicar → comprender → aportar → transmitir.',
   },
   economy: {
     eyebrow: 'Economía y producción',
@@ -307,10 +307,10 @@ const es: SiteContent = {
         cta: 'Hablar del piloto',
       },
       {
-        title: 'Soy Maestro',
+        title: 'Quiero compartir lo que sé',
         prompt: 'Tengo algo que enseñar.',
         description: 'Quiero transmitir un saber práctico o cultural y formar parte de una comunidad que lo valore y lo haga crecer.',
-        cta: 'Compartir mi oficio',
+        cta: 'Quiero compartir lo que sé',
       },
       {
         title: 'Quiero Participar',

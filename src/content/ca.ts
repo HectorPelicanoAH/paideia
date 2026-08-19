@@ -225,13 +225,13 @@ const ca: SiteContent = {
   },
   masters: {
     eyebrow: 'Mestres',
-    title: 'Qui sap fer, pot ensenyar.',
+    title: 'Tothom té alguna cosa per aprendre i alguna cosa per ensenyar.',
     intro:
-      'Els mestres de PAIDEIA no són només experts titulats. Són persones amb un saber incorporat, amb criteri, paciència i voluntat de transmetre.',
+      'A PAIDEIA, mestre és qui té un coneixement que val la pena compartir. Pot venir d’un ofici, d’anys d’experiència, d’una professió, d’una afició o d’alguna cosa apresa dels qui van venir abans.',
     profiles: [
       {
-        title: 'Ofici i experiència',
-        text: 'Pageses, fusters, cuineres, ramaders, paletes, artesanes, bibliotecaris o persones que coneixen bé un procés concret.',
+        title: 'Coneixements que formen part de la vida',
+        text: 'Conrear la terra, podar un arbre, aixecar un mur, cuinar, cosir, reparar, treballar la fusta, conèixer el bosc, fer servir una eina o comprendre una tecnologia.',
       },
       {
         title: 'Pedagogia de la proximitat',
@@ -242,7 +242,7 @@ const ca: SiteContent = {
         text: 'El mestre no és una figura distant. Forma part de la vida comuna i transmet també una manera d’estar, de parlar i de respondre davant la dificultat.',
       },
     ],
-    closing: 'Creiem que els pobles conserven coneixements que no haurien de desaparèixer.',
+    closing: 'Rebre → practicar → comprendre → aportar → transmetre.',
   },
   economy: {
     eyebrow: 'Economia i producció',
@@ -307,10 +307,10 @@ const ca: SiteContent = {
         cta: 'Parlem del pilot',
       },
       {
-        title: 'Sóc Mestre',
+        title: 'Vull compartir el que sé',
         prompt: 'Tinc alguna cosa per ensenyar.',
         description: 'Vull transmetre un saber pràctic o cultural i formar part d’una comunitat que el valori i el faci créixer.',
-        cta: 'Compartir el meu ofici',
+        cta: 'Vull compartir el que sé',
       },
       {
         title: 'Vull Participar',

@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { useLanguage } from '../hooks/useLanguage.tsx'
 import type { LanguageCode } from '../content/index.ts'
 
+const languageOptions: LanguageCode[] = ['es', 'ca', 'eu', 'gl']
+
 export default function Header() {
   const { content, language, setLanguage } = useLanguage()
   const [isOpen, setIsOpen] = useState(false)
@@ -49,7 +51,7 @@ export default function Header() {
             className="flex items-center gap-2"
             aria-label={content.header.languageSelectorLabel}
           >
-            {(['ca', 'es', 'eu', 'gl'] as LanguageCode[]).map(
+            {languageOptions.map(
               (option) => {
                 const active = option === language
 
@@ -143,7 +145,7 @@ export default function Header() {
               </p>
 
               <div className="flex flex-wrap gap-2">
-                {(['ca', 'es', 'eu', 'gl'] as LanguageCode[]).map(
+                {languageOptions.map(
                   (option) => {
                     const active = option === language
 
