@@ -5,6 +5,7 @@ import EconomySection from './components/EconomySection.tsx'
 import Footer from './components/Footer.tsx'
 import Header from './components/Header.tsx'
 import Hero from './components/Hero.tsx'
+import InteriorLinksSection from './components/InteriorLinksSection.tsx'
 import LearningSection from './components/LearningSection.tsx'
 import ManifestoSection from './components/ManifestoSection.tsx'
 import MastersSection from './components/MastersSection.tsx'
@@ -16,11 +17,12 @@ import TerritorySection from './components/TerritorySection.tsx'
 import WhatSection from './components/WhatSection.tsx'
 import WhySection from './components/WhySection.tsx'
 import { useLanguage } from './hooks/useLanguage.tsx'
+import interiorLinks from './content/interiorLinks.ts'
 
 const SITE_URL = 'https://hectorpelicanoah.github.io/paideia/'
 
 export default function App() {
-  const { content } = useLanguage()
+  const { content, language } = useLanguage()
 
   useEffect(() => {
     document.title = content.meta.title
@@ -64,6 +66,7 @@ export default function App() {
         <PilotSection content={content.pilot} />
         <ParticipateSection content={content.participate} />
         <ManifestoSection content={content.manifesto} />
+        <InteriorLinksSection content={interiorLinks[language]} />
         <ContactSection content={content.contact} />
       </main>
       <Footer content={{ footer: content.footer, header: content.header }} />
