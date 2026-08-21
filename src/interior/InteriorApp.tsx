@@ -123,7 +123,7 @@ export default function InteriorApp() {
       <div className="interior-layout">
         <Contents sections={page.sections} title={localized.ui.contents} openLabel={localized.ui.openContents} />
         <div className="interior-content">
-          {slug === 'origen' ? <figure className="interior-profile"><img src="/paideia/images/hector-paideia.jpg" alt={localized.ui.photoAlt} width="1456" height="1090" loading="eager" /><figcaption>Héctor · L’Argentera</figcaption></figure> : null}
+          {slug === 'origen' ? <figure className="interior-profile"><img src="/paideia/images/hector-huerto.jpg" alt={localized.ui.photoAlt} width="1600" height="1067" loading="eager" /><figcaption>Héctor · L’Argentera</figcaption></figure> : null}
           {page.sections.map(section => <SectionBlock key={section.id} section={section} roadmap={slug === 'como-empezar'} />)}
           {slug === 'participa' ? <ContactForm /> : null}
         </div>
