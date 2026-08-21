@@ -1,17 +1,17 @@
 import { useEffect, useState, type FormEvent } from 'react'
 import type { LanguageCode } from '../content/index.ts'
+import { pageSlugs, siteNavigation } from '../content/siteNavigation.ts'
 import { interiorContent } from './content/index.ts'
 import type { InteriorSection, PageSlug } from './types.ts'
 import { useInteriorLanguage } from './useInteriorLanguage.tsx'
 import './interior.css'
 
 const SITE = 'https://hectorpelicanoah.github.io/paideia'
-const slugs: PageSlug[] = ['proyecto', 'territorio', 'como-empezar', 'origen', 'participa']
 const languageCodes: LanguageCode[] = ['es', 'ca', 'eu', 'gl']
 
 function readSlug(): PageSlug {
   const segment = window.location.pathname.split('/').filter(Boolean).at(-1)
-  return slugs.includes(segment as PageSlug) ? segment as PageSlug : 'proyecto'
+  return pageSlugs.includes(segment as PageSlug) ? segment as PageSlug : 'proyecto'
 }
 
 function updateMetadata(slug: PageSlug, title: string, description: string, locale: string) {
@@ -35,27 +35,42 @@ function LanguageSelector({ label }: { label: string }) {
   </div>
 }
 
-function InteriorHeader({ backHome, languageLabel }: { backHome: string; languageLabel: string }) {
+function InteriorHeader({ slug, sections, languageLabel }: { slug: PageSlug; sections: InteriorSection[]; languageLabel: string }) {
+  const { language } = useInteriorLanguage()
+  const [isOpen, setIsOpen] = useState(false)
+  const navigation = siteNavigation[language]
+  const menuText = language === 'eu' ? 'Menua' : 'Menú'
   return <header className="interior-header">
-    <a className="interior-brand" href="/paideia/" aria-label="PAIDEIA · inicio">
-      <img src="/paideia/brand/paideia-mark.svg" alt="" width="48" height="48" />
-      <span>PAIDEIA</span>
-    </a>
-    <div className="interior-header-actions">
-      <a className="interior-home-link" href="/paideia/"><span aria-hidden="true">←</span> {backHome}</a>
-      <LanguageSelector label={languageLabel} />
+    <div className="interior-header-primary">
+      <a className="interior-brand" href="/paideia/" aria-label="PAIDEIA">
+        <img src="/paideia/brand/paideia-mark.svg" alt="" width="48" height="48" />
+        <span>PAIDEIA</span>
+      </a>
+      <nav className="interior-main-nav" aria-label={navigation.mainMenu}>
+        <a href="/paideia/">{navigation.presentation}</a>
+        {pageSlugs.map(pageSlug => <a key={pageSlug} href={`/paideia/${pageSlug}/`} aria-current={pageSlug === slug ? 'page' : undefined}>{navigation.pages[pageSlug]}</a>)}
+      </nav>
+      <div className="interior-header-actions">
+        <LanguageSelector label={languageLabel} />
+        <button className="interior-menu-toggle" type="button" aria-expanded={isOpen} aria-controls="interior-mobile-nav" aria-label={isOpen ? navigation.closeMenu : navigation.openMenu} onClick={() => setIsOpen(open => !open)}>{isOpen ? '×' : menuText}</button>
+      </div>
     </div>
+    <nav className="interior-section-nav" aria-label={navigation.pageSections}>
+      {sections.map(section => <a key={section.id} href={`#${section.id}`}>{section.title}</a>)}
+    </nav>
+    {isOpen ? <div id="interior-mobile-nav" className="interior-mobile-nav">
+      <nav aria-label={navigation.mainMenu}>
+        <p>{navigation.mainMenu}</p>
+        <a href="/paideia/" onClick={() => setIsOpen(false)}>{navigation.presentation}</a>
+        {pageSlugs.map(pageSlug => <a key={pageSlug} href={`/paideia/${pageSlug}/`} aria-current={pageSlug === slug ? 'page' : undefined} onClick={() => setIsOpen(false)}>{navigation.pages[pageSlug]}</a>)}
+      </nav>
+      <nav aria-label={navigation.pageSections}>
+        <p>{navigation.pageSections}</p>
+        {sections.map(section => <a key={section.id} href={`#${section.id}`} onClick={() => setIsOpen(false)}>{section.title}</a>)}
+      </nav>
+      <LanguageSelector label={languageLabel} />
+    </div> : null}
   </header>
-}
-
-function Contents({ sections, title, openLabel }: { sections: InteriorSection[]; title: string; openLabel: string }) {
-  return <nav className="interior-toc" aria-label={title}>
-    <details>
-      <summary>{openLabel}</summary>
-      <ol>{sections.map(section => <li key={section.id}><a href={`#${section.id}`}>{section.title}</a></li>)}</ol>
-    </details>
-    <div className="interior-toc-desktop"><p>{title}</p><ol>{sections.map(section => <li key={section.id}><a href={`#${section.id}`}>{section.title}</a></li>)}</ol></div>
-  </nav>
 }
 
 function SectionBlock({ section, roadmap }: { section: InteriorSection; roadmap: boolean }) {
@@ -100,8 +115,8 @@ function ContactForm() {
 
 function PageNavigation({ slug, label }: { slug: PageSlug; label: string }) {
   const { language } = useInteriorLanguage()
-  const current = slugs.indexOf(slug)
-  const nextSlugs = [slugs[(current + 1) % slugs.length], slugs[(current + 2) % slugs.length]]
+  const current = pageSlugs.indexOf(slug)
+  const nextSlugs = [pageSlugs[(current + 1) % pageSlugs.length], pageSlugs[(current + 2) % pageSlugs.length]]
   return <nav className="interior-page-nav" aria-label={label}><p>{label}</p><div>{nextSlugs.map(next => <a key={next} href={`/paideia/${next}/`}><span>{interiorContent[language].nav[next]}</span><b aria-hidden="true">↗</b></a>)}</div></nav>
 }
 
@@ -113,7 +128,7 @@ export default function InteriorApp() {
   useEffect(() => updateMetadata(slug, page.title, page.description, language), [language, page, slug])
   return <div className="interior-shell">
     <a className="interior-skip" href="#interior-main">{localized.ui.contents}</a>
-    <InteriorHeader backHome={localized.ui.backHome} languageLabel={localized.ui.languageName} />
+    <InteriorHeader slug={slug} sections={page.sections} languageLabel={localized.ui.languageName} />
     <main id="interior-main">
       <section className="interior-hero">
         <p className="interior-kicker">{localized.ui.foundational}</p>
@@ -121,7 +136,6 @@ export default function InteriorApp() {
         {page.status ? <p className="interior-status">{page.status}</p> : null}
       </section>
       <div className="interior-layout">
-        <Contents sections={page.sections} title={localized.ui.contents} openLabel={localized.ui.openContents} />
         <div className="interior-content">
           {slug === 'origen' ? <figure className="interior-profile"><img src="/paideia/images/hector-huerto.jpg" alt={localized.ui.photoAlt} width="1600" height="1067" loading="eager" /><figcaption>Héctor · L’Argentera</figcaption></figure> : null}
           {page.sections.map(section => <SectionBlock key={section.id} section={section} roadmap={slug === 'como-empezar'} />)}

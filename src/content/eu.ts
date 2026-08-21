@@ -47,8 +47,8 @@ const eu: SiteContent = {
     description:
       'PAIDEIAk belaunaldi desberdinetako pertsonak elkartzen ditu, eginez ikasteko eta lurraldearen benetako beharrei erantzuteko.',
     signals: ['Ikaskuntza praktikoa', 'Komunitateko bizitza', 'Tokiko ekarpena'],
-    primaryCta: 'Parte izan nahi dut',
-    secondaryCta: 'Ikusi nola funtzionatzen duen',
+    primaryCta: 'Proiektua ezagutu',
+    secondaryCta: 'Nola hasi ikusi',
     asideQuote: 'Herria ez litzateke PAIDEIAren agertokia izango. Bere parte izango litzateke.',
   },
   why: {
