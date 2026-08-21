@@ -47,7 +47,7 @@ export default function Header() {
         </div>
 
         <nav className="hidden border-t border-stone/20 xl:block" aria-label={navigation.homeSections}>
-          <ul className="flex items-center justify-center gap-5 overflow-x-auto py-3 text-[.78rem] text-earth/80">
+          <ul className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 py-3 text-[.78rem] text-earth/80">
             {content.header.nav.map((item) => <li key={item.href} className="shrink-0"><a className="transition-colors hover:text-green focus-visible:text-green" href={item.href}>{item.label}</a></li>)}
           </ul>
         </nav>
