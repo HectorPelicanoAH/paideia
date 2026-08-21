@@ -50,13 +50,13 @@ export default function Hero({ content }: HeroProps) {
           </ul>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <a
-              href="#participate"
+              href="/paideia/proyecto/"
               className="inline-flex items-center justify-center rounded-full bg-charcoal px-6 py-4 text-sm font-semibold text-cream transition hover:bg-earth"
             >
               {content.primaryCta}
             </a>
             <a
-              href="#what"
+              href="/paideia/como-empezar/"
               className="inline-flex items-center justify-center rounded-full border border-earth/30 px-6 py-4 text-sm font-semibold text-charcoal transition hover:border-green hover:text-green"
             >
               {content.secondaryCta}

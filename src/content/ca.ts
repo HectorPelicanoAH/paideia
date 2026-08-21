@@ -47,8 +47,8 @@ const ca: SiteContent = {
     description:
       'PAIDEIA connecta persones de diferents generacions per aprendre fent i respondre a necessitats reals del territori.',
     signals: ['Aprenentatge pràctic', 'Vida en comunitat', 'Contribució local'],
-    primaryCta: 'Vull formar-ne part',
-    secondaryCta: 'Veure com funciona',
+    primaryCta: 'Conèixer el projecte',
+    secondaryCta: 'Veure com començar',
     asideQuote: 'El poble no seria l’escenari de PAIDEIA. Seria part d’ella.',
   },
   why: {

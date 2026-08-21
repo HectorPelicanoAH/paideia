@@ -47,8 +47,8 @@ const gl: SiteContent = {
     description:
       'PAIDEIA conecta persoas de distintas xeracións para aprender facendo e responder a necesidades reais do territorio.',
     signals: ['Aprendizaxe práctica', 'Vida en comunidade', 'Contribución local'],
-    primaryCta: 'Quero formar parte',
-    secondaryCta: 'Ver como funciona',
+    primaryCta: 'Coñecer o proxecto',
+    secondaryCta: 'Ver como comezar',
     asideQuote: 'A aldea non sería o escenario de PAIDEIA. Sería parte dela.',
   },
   why: {
