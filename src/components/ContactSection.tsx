@@ -8,7 +8,7 @@ interface ContactSectionProps {
 }
 
 const fieldClasses =
-  'mt-2 w-full rounded-2xl border border-stone/30 bg-white px-4 py-3 text-base text-charcoal outline-none transition placeholder:text-stone focus:border-green focus:ring-2 focus:ring-green/20'
+  'mt-2 w-full rounded-2xl border border-stone/35 bg-cream/60 px-4 py-3 text-base text-charcoal outline-none transition placeholder:text-stone focus:border-green focus:bg-white focus:ring-2 focus:ring-green/20'
 
 export default function ContactSection({ content }: ContactSectionProps) {
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')
@@ -87,11 +87,11 @@ export default function ContactSection({ content }: ContactSectionProps) {
   }
 
   return (
-    <Section id="contact" background="white" eyebrow={content.eyebrow} title={content.title} intro={content.intro}>
+    <Section id="contact" background="cream" eyebrow={content.eyebrow} title={content.title} intro={content.intro}>
       <div className="mx-auto max-w-4xl">
         <Reveal>
           <form
-            className="rounded-[2rem] border border-stone/20 bg-cream p-8"
+            className="rounded-[2rem] border border-stone/25 bg-white p-8 shadow-[0_20px_70px_rgba(45,42,38,0.08)]"
             onSubmit={handleSubmit}
           >
             <div className="grid gap-6 md:grid-cols-2">
