@@ -137,7 +137,7 @@ export default function InteriorApp() {
       </section>
       <div className="interior-layout">
         <div className="interior-content">
-          {slug === 'origen' ? <figure className="interior-profile"><img src="/paideia/images/hector-huerto.jpg" alt={localized.ui.photoAlt} width="1600" height="1067" loading="eager" /><figcaption>Héctor · L’Argentera</figcaption></figure> : null}
+          {slug === 'origen' ? <figure className="interior-profile"><img src="/paideia/images/hector-huerto.jpg" alt={localized.ui.photoAlt} width="750" height="1200" loading="eager" /><figcaption>Héctor · L’Argentera</figcaption></figure> : null}
           {page.sections.map(section => <SectionBlock key={section.id} section={section} roadmap={slug === 'como-empezar'} />)}
           {slug === 'participa' ? <ContactForm /> : null}
         </div>
