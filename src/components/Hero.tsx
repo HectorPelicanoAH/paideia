@@ -40,6 +40,9 @@ export default function Hero({ content }: HeroProps) {
           <p className="mt-6 font-serif text-2xl leading-tight text-earth sm:text-3xl lg:text-4xl">
             {content.subtitle}
           </p>
+          <p className="mt-7 max-w-2xl border-l-2 border-warm pl-5 font-serif text-lg leading-8 text-charcoal">
+            {content.meaning}
+          </p>
           <p className="mt-8 max-w-2xl text-lg leading-8 text-earth">{content.description}</p>
           <ul className="mt-7 flex flex-wrap gap-x-6 gap-y-3" aria-label={content.subtitle}>
             {content.signals.map((signal) => (

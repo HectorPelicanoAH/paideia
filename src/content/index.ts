@@ -63,6 +63,7 @@ export interface SiteContent {
     eyebrow: string
     title: string
     subtitle: string
+    meaning: string
     description: string
     signals: string[]
     primaryCta: string

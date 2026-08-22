@@ -45,6 +45,7 @@ const ca: SiteContent = {
     eyebrow: 'ARRELATS AL TERRITORI · OBERTS AL FUTUR',
     title: 'PAIDEIA',
     subtitle: 'Aprendre, treballar i viure en comunitat en un poble petit.',
+    meaning: 'Paideia és una paraula grega vinculada a la formació integral de la persona. Aquí dona nom a una manera d’aprendre al llarg de tota la vida, unint coneixement, caràcter, pràctica i comunitat.',
     description:
       'PAIDEIA connecta persones de diferents generacions per aprendre fent i respondre a necessitats reals del territori.',
     signals: ['Aprenentatge pràctic', 'Vida en comunitat', 'Contribució local'],
