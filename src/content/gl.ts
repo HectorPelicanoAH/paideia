@@ -41,9 +41,11 @@ const gl: SiteContent = {
     participateLabel: 'Quero participar',
   },
   hero: {
+    status: 'PROXECTO EN CONSTRUCIÓN · FASE FUNDACIONAL',
     eyebrow: 'ARRAIGADOS AO TERRITORIO · ABERTOS AO FUTURO',
     title: 'PAIDEIA',
     subtitle: 'Aprender, traballar e vivir en comunidade nunha vila pequena.',
+    meaning: 'Paideia é unha palabra grega vinculada á formación integral da persoa. Aquí dá nome a unha forma de aprender durante toda a vida, unindo coñecemento, carácter, práctica e comunidade.',
     description:
       'PAIDEIA conecta persoas de distintas xeracións para aprender facendo e responder a necesidades reais do territorio.',
     signals: ['Aprendizaxe práctica', 'Vida en comunidade', 'Contribución local'],

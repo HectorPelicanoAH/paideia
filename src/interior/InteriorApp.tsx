@@ -1,5 +1,7 @@
-import { useEffect, useState, type FormEvent } from 'react'
-import type { LanguageCode } from '../content/index.ts'
+import { useEffect, useState } from 'react'
+import ContactForm from '../components/ContactForm.tsx'
+import { contentByLanguage, type LanguageCode } from '../content/index.ts'
+import { imageAlt, type EditorialImageKey } from '../content/imageAlt.ts'
 import { pageSlugs, siteNavigation } from '../content/siteNavigation.ts'
 import { interiorContent } from './content/index.ts'
 import type { InteriorSection, PageSlug } from './types.ts'
@@ -8,6 +10,12 @@ import './interior.css'
 
 const SITE = 'https://hectorpelicanoah.github.io/paideia'
 const languageCodes: LanguageCode[] = ['es', 'ca', 'eu', 'gl']
+const pageImages: Partial<Record<PageSlug, { image: EditorialImageKey; src: string; width: number; height: number; position?: string }>> = {
+  proyecto: { image: 'learning', src: '/paideia/images/aprender-haciendo.webp', width: 1448, height: 1086, position: 'center 58%' },
+  territorio: { image: 'territory', src: '/paideia/images/territorio.webp', width: 1823, height: 863 },
+  'como-empezar': { image: 'pilot', src: '/paideia/images/proyecto-piloto.webp', width: 1448, height: 1086, position: 'center 58%' },
+  participa: { image: 'participate', src: '/paideia/images/participacion.webp', width: 1536, height: 1024 },
+}
 
 function readSlug(): PageSlug {
   const segment = window.location.pathname.split('/').filter(Boolean).at(-1)
@@ -84,35 +92,6 @@ function SectionBlock({ section, roadmap }: { section: InteriorSection; roadmap:
   </section>
 }
 
-function ContactForm() {
-  const { language } = useInteriorLanguage()
-  const form = interiorContent[language].ui.form
-  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')
-  async function submit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault()
-    const node = event.currentTarget
-    const data = new FormData(node)
-    const recipient = String.fromCharCode(102,48,97,99,101,54,49,50,49,57,56,101,101,53,55,48,50,50,102,50,52,49,52,102,55,56,51,99,48,48,49,97)
-    setStatus('sending')
-    try {
-      const response = await fetch(`https://formsubmit.co/ajax/${recipient}`, { method: 'POST', headers: { Accept: 'application/json', 'Content-Type': 'application/json' }, body: JSON.stringify({ name: data.get('name'), email: data.get('email'), profile: data.get('profile'), place: data.get('place'), contribution: data.get('contribution'), message: data.get('message'), _honey: data.get('_honey'), _subject: 'Nuevo contacto desde PAIDEIA · páginas interiores', _captcha: 'false', _template: 'table' }) })
-      if (!response.ok) throw new Error()
-      node.reset(); setStatus('success')
-    } catch { setStatus('error') }
-  }
-  return <form className="interior-form" onSubmit={submit}>
-    <div className="form-grid"><label>{form.name}<input name="name" autoComplete="name" required /></label><label>{form.email}<input name="email" type="email" autoComplete="email" required /></label></div>
-    <label>{form.profile}<select name="profile" required>{form.profiles.map(item => <option key={item}>{item}</option>)}</select></label>
-    <label>{form.place}<input name="place" autoComplete="address-level2" /></label>
-    <label>{form.contribution}<textarea name="contribution" rows={3} required /></label>
-    <label>{form.message}<textarea name="message" rows={5} required /></label>
-    <label className="form-consent"><input name="privacy" type="checkbox" required /> <span>{form.privacy}</span></label>
-    <label className="form-trap" aria-hidden="true">Website<input name="_honey" tabIndex={-1} autoComplete="off" /></label>
-    <p className="form-status" aria-live="polite">{status === 'sending' ? form.sending : status === 'success' ? form.success : status === 'error' ? form.error : ''}</p>
-    <button type="submit" disabled={status === 'sending'}>{status === 'sending' ? form.sending : form.submit}</button>
-  </form>
-}
-
 function PageNavigation({ slug, label }: { slug: PageSlug; label: string }) {
   const { language } = useInteriorLanguage()
   const current = pageSlugs.indexOf(slug)
@@ -125,6 +104,7 @@ export default function InteriorApp() {
   const { language } = useInteriorLanguage()
   const localized = interiorContent[language]
   const page = localized.pages[slug]
+  const pageImage = pageImages[slug]
   useEffect(() => updateMetadata(slug, page.title, page.description, language), [language, page, slug])
   return <div className="interior-shell">
     <a className="interior-skip" href="#interior-main">{localized.ui.contents}</a>
@@ -135,11 +115,12 @@ export default function InteriorApp() {
         <h1>{page.title}</h1><p className="interior-intro">{page.intro}</p>
         {page.status ? <p className="interior-status">{page.status}</p> : null}
       </section>
+      {pageImage ? <figure className="interior-feature-image"><img src={pageImage.src} alt={imageAlt[language][pageImage.image]} width={pageImage.width} height={pageImage.height} loading="lazy" decoding="async" style={{ objectPosition: pageImage.position }} /></figure> : null}
       <div className="interior-layout">
         <div className="interior-content">
           {slug === 'origen' ? <figure className="interior-profile"><img src="/paideia/images/hector-huerto.jpg" alt={localized.ui.photoAlt} width="750" height="1200" loading="eager" /><figcaption>Héctor · L’Argentera</figcaption></figure> : null}
           {page.sections.map(section => <SectionBlock key={section.id} section={section} roadmap={slug === 'como-empezar'} />)}
-          {slug === 'participa' ? <ContactForm /> : null}
+          {slug === 'participa' ? <div className="interior-contact-form"><ContactForm content={contentByLanguage[language].contact.form} /></div> : null}
         </div>
       </div>
       <PageNavigation slug={slug} label={localized.ui.explore} />

@@ -32,20 +32,6 @@ export interface InteriorUI {
   next: string
   footer: string
   photoAlt: string
-  form: {
-    name: string
-    email: string
-    profile: string
-    place: string
-    contribution: string
-    message: string
-    privacy: string
-    submit: string
-    sending: string
-    success: string
-    error: string
-    profiles: string[]
-  }
 }
 
 export interface InteriorLanguageContent {

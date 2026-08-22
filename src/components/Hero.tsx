@@ -34,10 +34,14 @@ export default function Hero({ content }: HeroProps) {
       />
       <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-5 sm:px-8 lg:grid-cols-[minmax(0,.9fr)_minmax(0,1.1fr)] lg:px-12">
         <Reveal className="max-w-3xl">
+          <p className="mb-6 inline-flex rounded-full border border-warm/70 bg-warm/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-charcoal">{content.status}</p>
           <p className="mb-6 text-sm font-medium uppercase tracking-[0.4em] text-green">{content.eyebrow}</p>
           <h1 className="font-serif text-5xl leading-[.95] text-charcoal sm:text-6xl lg:text-7xl">{content.title}</h1>
           <p className="mt-6 font-serif text-2xl leading-tight text-earth sm:text-3xl lg:text-4xl">
             {content.subtitle}
+          </p>
+          <p className="mt-7 max-w-2xl border-l-2 border-warm pl-5 font-serif text-lg leading-8 text-charcoal">
+            {content.meaning}
           </p>
           <p className="mt-8 max-w-2xl text-lg leading-8 text-earth">{content.description}</p>
           <ul className="mt-7 flex flex-wrap gap-x-6 gap-y-3" aria-label={content.subtitle}>

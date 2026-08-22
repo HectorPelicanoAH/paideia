@@ -41,9 +41,11 @@ const eu: SiteContent = {
     participateLabel: 'Parte hartu',
   },
   hero: {
+    status: 'PROIEKTUA ERAIKITZEN · SORRERA-FASEA',
     eyebrow: 'LURRALDEARI ERROTUTA · ETORKIZUNARI IREKITA',
     title: 'PAIDEIA',
     subtitle: 'Herri txiki batean, komunitatean ikasi, lan egin eta bizi.',
+    meaning: 'Paideia pertsonaren prestakuntza integralarekin lotutako grezierazko hitza da. Hemen bizitza osoan ikasteko modu bat izendatzen du, ezagutza, izaera, praktika eta komunitatea lotuz.',
     description:
       'PAIDEIAk belaunaldi desberdinetako pertsonak elkartzen ditu, eginez ikasteko eta lurraldearen benetako beharrei erantzuteko.',
     signals: ['Ikaskuntza praktikoa', 'Komunitateko bizitza', 'Tokiko ekarpena'],

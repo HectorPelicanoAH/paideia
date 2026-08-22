@@ -7,13 +7,6 @@ const es: InteriorLanguageContent = {
     foundational: 'PAIDEIA se encuentra en fase fundacional', explore: 'Seguir explorando', previous: 'Anterior', next: 'Siguiente',
     footer: 'Una propuesta abierta para aprender a vivir, cuidar el territorio y transmitir lo que sabemos.',
     photoAlt: 'Héctor en un huerto de L’Argentera, sosteniendo tomates recién recogidos',
-    form: {
-      name: 'Nombre', email: 'Correo electrónico', profile: 'Perfil', place: 'Localidad o territorio',
-      contribution: 'Cómo te gustaría contribuir', message: 'Mensaje',
-      privacy: 'Acepto que mis datos se utilicen únicamente para responder a este contacto.',
-      submit: 'Enviar mensaje', sending: 'Enviando…', success: 'Gracias. Tu mensaje se ha enviado correctamente.', error: 'No se ha podido enviar. Inténtalo de nuevo.',
-      profiles: ['Quiero ayudar a fundar PAIDEIA', 'Soy un municipio', 'Quiero compartir lo que sé', 'Quiero participar', 'Represento a una entidad', 'Puedo aportar recursos'],
-    },
   },
   nav: { proyecto: 'El proyecto', territorio: 'Territorio', 'como-empezar': 'Cómo empezar', origen: 'Origen', participa: 'Participa' },
   pages: {
@@ -22,6 +15,7 @@ const es: InteriorLanguageContent = {
       intro: 'PAIDEIA propone recuperar la relación entre conocimiento, trabajo, territorio y comunidad mediante una forma de aprendizaje basada en hacer, cuidar, comprender, compartir y transmitir.',
       description: 'La filosofía de PAIDEIA: una comunidad de aprendizaje, trabajo y vida arraigada en un pequeño municipio.',
       sections: [
+        { id: 'significado', title: 'Qué significa PAIDEIA', paragraphs: ['Paideia (παιδεία) es un término griego relacionado con la educación y la formación de la persona. No se limitaba a adquirir información: abarcaba el desarrollo del criterio, el carácter, las capacidades y la participación en la vida de la comunidad.', 'PAIDEIA recoge esa idea como inspiración, no como un modelo histórico que debamos reproducir. La traslada al presente para preguntarse cómo aprender durante toda la vida mediante el conocimiento, el trabajo, el cuidado, la convivencia y la transmisión.'] },
         { id: 'que-es', title: 'Qué es PAIDEIA', paragraphs: ['Una propuesta de comunidad de aprendizaje, trabajo y vida arraigada en un pequeño municipio. No es una escuela convencional, un programa asistencial ni una iniciativa turística.', 'PAIDEIA se encuentra en fase fundacional: describe una dirección y unos principios que deberán contrastarse con un territorio y con las personas implicadas.'] },
         { id: 'por-que', title: 'Por qué nace', paragraphs: ['Nace de una desconexión más amplia que el despoblamiento: nos hemos alejado de muchos procesos que sostienen la vida —producir, reparar, cultivar, cocinar, cuidar, comprender y transmitir— y de las personas que conservan esos saberes.'] },
         { id: 'principios', title: 'Los cinco principios', paragraphs: ['Los cinco elementos del símbolo representan un movimiento común. El punto central es el propósito que los reúne: aprender a vivir.'], bullets: ['Aprender · abrirse a comprender.', 'Hacer · convertir el conocimiento en práctica.', 'Cuidar · atender personas, vínculos y territorio.', 'Compartir · poner capacidades en común.', 'Transmitir · evitar que el conocimiento termine con nosotros.'] },
