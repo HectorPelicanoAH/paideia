@@ -1,7 +1,13 @@
 import type { InteriorLanguageContent } from '../types.ts'
 
 const eu: InteriorLanguageContent = {
-  ui: { languageName: 'Hizkuntza', languages: { es: 'Gaztelania', ca: 'Katalana', eu: 'Euskara', gl: 'Galiziera' }, backHome: 'Hasierara itzuli', contents: 'Orrialde honetan', openContents: 'Aurkibidea erakutsi', foundational: 'PAIDEIA sorrera-fasean dago', explore: 'Jarraitu aztertzen', previous: 'Aurrekoa', next: 'Hurrengoa', footer: 'Bizitzen ikasteko, lurraldea zaintzeko eta dakiguna transmititzeko proposamen irekia.', photoAlt: 'Héctor L’Argenterako baratze batean, bildu berri diren tomateak eskuetan', form: { name: 'Izena', email: 'Posta elektronikoa', profile: 'Profila', place: 'Herria edo lurraldea', contribution: 'Nola lagundu nahiko zenuke', message: 'Mezua', privacy: 'Onartzen dut nire datuak harreman honi erantzuteko soilik erabiltzea.', submit: 'Mezua bidali', sending: 'Bidaltzen…', success: 'Eskerrik asko. Mezua behar bezala bidali da.', error: 'Ezin izan da bidali. Saiatu berriro.', profiles: ['PAIDEIA sortzen lagundu nahi dut', 'Udal bat naiz', 'Dakidana partekatu nahi dut', 'Parte hartu nahi dut', 'Erakunde bat ordezkatzen dut', 'Baliabideak eskain ditzaket'] } },
+  ui: {
+    languageName: 'Hizkuntza', languages: { es: 'Gaztelania', ca: 'Katalana', eu: 'Euskara', gl: 'Galiziera' },
+    backHome: 'Hasierara itzuli', contents: 'Orrialde honetan', openContents: 'Aurkibidea erakutsi',
+    foundational: 'PAIDEIA sorrera-fasean dago', explore: 'Jarraitu aztertzen', previous: 'Aurrekoa', next: 'Hurrengoa',
+    footer: 'Bizitzen ikasteko, lurraldea zaintzeko eta dakiguna transmititzeko proposamen irekia.',
+    photoAlt: 'Héctor L’Argenterako baratze batean, bildu berri diren tomateak eskuetan',
+  },
   nav: { proyecto: 'Proiektua', territorio: 'Lurraldea', 'como-empezar': 'Nola hasi', origen: 'Jatorria', participa: 'Parte hartu' },
   pages: {
     proyecto: { title: 'Bizitzen ikasteko komunitatea', intro: 'PAIDEIAk ezagutzaren, lanaren, lurraldearen eta komunitatearen arteko harremana berreskuratzea proposatzen du, eginez, zainduz, ulertuz, partekatuz eta transmitituz ikasteko.', description: 'PAIDEIAren filosofia: herri txiki batean errotutako ikaskuntza-, lan- eta bizitza-komunitatea.', sections: [

@@ -1,7 +1,13 @@
 import type { InteriorLanguageContent } from '../types.ts'
 
 const ca: InteriorLanguageContent = {
-  ui: { languageName: 'Idioma', languages: { es: 'Castellà', ca: 'Català', eu: 'Basc', gl: 'Gallec' }, backHome: 'Tornar a l’inici', contents: 'En aquesta pàgina', openContents: 'Mostrar l’índex', foundational: 'PAIDEIA es troba en fase fundacional', explore: 'Continuar explorant', previous: 'Anterior', next: 'Següent', footer: 'Una proposta oberta per aprendre a viure, cuidar el territori i transmetre el que sabem.', photoAlt: 'Héctor en un hort de L’Argentera, sostenint tomàquets acabats de collir', form: { name: 'Nom', email: 'Correu electrònic', profile: 'Perfil', place: 'Localitat o territori', contribution: 'Com t’agradaria contribuir', message: 'Missatge', privacy: 'Accepto que les meves dades s’utilitzin únicament per respondre aquest contacte.', submit: 'Enviar missatge', sending: 'Enviant…', success: 'Gràcies. El missatge s’ha enviat correctament.', error: 'No s’ha pogut enviar. Torna-ho a provar.', profiles: ['Vull ajudar a fundar PAIDEIA', 'Soc un municipi', 'Vull compartir el que sé', 'Vull participar', 'Represento una entitat', 'Puc aportar recursos'] } },
+  ui: {
+    languageName: 'Idioma', languages: { es: 'Castellà', ca: 'Català', eu: 'Basc', gl: 'Gallec' },
+    backHome: 'Tornar a l’inici', contents: 'En aquesta pàgina', openContents: 'Mostrar l’índex',
+    foundational: 'PAIDEIA es troba en fase fundacional', explore: 'Continuar explorant', previous: 'Anterior', next: 'Següent',
+    footer: 'Una proposta oberta per aprendre a viure, cuidar el territori i transmetre el que sabem.',
+    photoAlt: 'Héctor en un hort de L’Argentera, sostenint tomàquets acabats de collir',
+  },
   nav: { proyecto: 'El projecte', territorio: 'Territori', 'como-empezar': 'Com començar', origen: 'Origen', participa: 'Participa' },
   pages: {
     proyecto: { title: 'Una comunitat per aprendre a viure', intro: 'PAIDEIA proposa recuperar la relació entre coneixement, treball, territori i comunitat mitjançant un aprenentatge basat a fer, cuidar, comprendre, compartir i transmetre.', description: 'La filosofia de PAIDEIA: una comunitat d’aprenentatge, treball i vida arrelada en un municipi petit.', sections: [

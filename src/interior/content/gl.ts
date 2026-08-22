@@ -1,7 +1,13 @@
 import type { InteriorLanguageContent } from '../types.ts'
 
 const gl: InteriorLanguageContent = {
-  ui: { languageName: 'Idioma', languages: { es: 'Castelán', ca: 'Catalán', eu: 'Éuscaro', gl: 'Galego' }, backHome: 'Volver ao inicio', contents: 'Nesta páxina', openContents: 'Mostrar o índice', foundational: 'PAIDEIA atópase en fase fundacional', explore: 'Seguir explorando', previous: 'Anterior', next: 'Seguinte', footer: 'Unha proposta aberta para aprender a vivir, coidar o territorio e transmitir o que sabemos.', photoAlt: 'Héctor nunha horta de L’Argentera, sostendo tomates acabados de recoller', form: { name: 'Nome', email: 'Correo electrónico', profile: 'Perfil', place: 'Localidade ou territorio', contribution: 'Como che gustaría contribuír', message: 'Mensaxe', privacy: 'Acepto que os meus datos se utilicen unicamente para responder a este contacto.', submit: 'Enviar mensaxe', sending: 'Enviando…', success: 'Grazas. A mensaxe enviouse correctamente.', error: 'Non se puido enviar. Téntao de novo.', profiles: ['Quero axudar a fundar PAIDEIA', 'Son un municipio', 'Quero compartir o que sei', 'Quero participar', 'Represento unha entidade', 'Podo achegar recursos'] } },
+  ui: {
+    languageName: 'Idioma', languages: { es: 'Castelán', ca: 'Catalán', eu: 'Éuscaro', gl: 'Galego' },
+    backHome: 'Volver ao inicio', contents: 'Nesta páxina', openContents: 'Mostrar o índice',
+    foundational: 'PAIDEIA atópase en fase fundacional', explore: 'Seguir explorando', previous: 'Anterior', next: 'Seguinte',
+    footer: 'Unha proposta aberta para aprender a vivir, coidar o territorio e transmitir o que sabemos.',
+    photoAlt: 'Héctor nunha horta de L’Argentera, sostendo tomates acabados de recoller',
+  },
   nav: { proyecto: 'O proxecto', territorio: 'Territorio', 'como-empezar': 'Como comezar', origen: 'Orixe', participa: 'Participa' },
   pages: {
     proyecto: { title: 'Unha comunidade para aprender a vivir', intro: 'PAIDEIA propón recuperar a relación entre coñecemento, traballo, territorio e comunidade mediante unha aprendizaxe baseada en facer, coidar, comprender, compartir e transmitir.', description: 'A filosofía de PAIDEIA: unha comunidade de aprendizaxe, traballo e vida arraigada nun municipio pequeno.', sections: [

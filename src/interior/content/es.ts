@@ -7,13 +7,6 @@ const es: InteriorLanguageContent = {
     foundational: 'PAIDEIA se encuentra en fase fundacional', explore: 'Seguir explorando', previous: 'Anterior', next: 'Siguiente',
     footer: 'Una propuesta abierta para aprender a vivir, cuidar el territorio y transmitir lo que sabemos.',
     photoAlt: 'Héctor en un huerto de L’Argentera, sosteniendo tomates recién recogidos',
-    form: {
-      name: 'Nombre', email: 'Correo electrónico', profile: 'Perfil', place: 'Localidad o territorio',
-      contribution: 'Cómo te gustaría contribuir', message: 'Mensaje',
-      privacy: 'Acepto que mis datos se utilicen únicamente para responder a este contacto.',
-      submit: 'Enviar mensaje', sending: 'Enviando…', success: 'Gracias. Tu mensaje se ha enviado correctamente.', error: 'No se ha podido enviar. Inténtalo de nuevo.',
-      profiles: ['Quiero ayudar a fundar PAIDEIA', 'Soy un municipio', 'Quiero compartir lo que sé', 'Quiero participar', 'Represento a una entidad', 'Puedo aportar recursos'],
-    },
   },
   nav: { proyecto: 'El proyecto', territorio: 'Territorio', 'como-empezar': 'Cómo empezar', origen: 'Origen', participa: 'Participa' },
   pages: {

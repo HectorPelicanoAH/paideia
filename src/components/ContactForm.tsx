@@ -1,0 +1,116 @@
+import { useState, type FormEvent } from 'react'
+import type { SiteContent } from '../content/index.ts'
+
+interface ContactFormProps {
+  content: SiteContent['contact']['form']
+}
+
+const fieldClasses =
+  'mt-2 w-full rounded-2xl border border-stone/35 bg-cream/60 px-4 py-3 text-base text-charcoal outline-none transition placeholder:text-stone focus:border-green focus:bg-white focus:ring-2 focus:ring-green/20'
+
+export default function ContactForm({ content }: ContactFormProps) {
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+
+    const form = event.currentTarget
+    const formData = new FormData(form)
+    const recipient = String.fromCharCode(
+      102, 48, 97, 99, 101, 54, 49, 50, 49, 57, 56, 101, 101, 53, 55, 48,
+      50, 50, 102, 50, 52, 49, 52, 102, 55, 56, 51, 99, 48, 48, 49, 97,
+    )
+
+    setStatus('sending')
+
+    try {
+      const response = await fetch(`https://formsubmit.co/ajax/${recipient}`, {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.get('name'),
+          email: formData.get('email'),
+          role: formData.get('role'),
+          municipality: formData.get('municipality'),
+          message: formData.get('message'),
+          _honey: formData.get('_honey'),
+          _subject: 'Nuevo contacto desde PAIDEIA',
+          _captcha: 'false',
+          _template: 'table',
+        }),
+      })
+
+      if (!response.ok) {
+        throw new Error('Request failed')
+      }
+
+      form.reset()
+      setStatus('success')
+    } catch {
+      setStatus('error')
+    }
+  }
+
+  return (
+    <form
+      className="rounded-[2rem] border border-stone/25 bg-white p-8 shadow-[0_20px_70px_rgba(45,42,38,0.08)]"
+      onSubmit={handleSubmit}
+    >
+      <div className="grid gap-6 md:grid-cols-2">
+        <label className="block text-sm font-medium text-charcoal">
+          {content.nameLabel}
+          <input className={fieldClasses} name="name" type="text" required />
+        </label>
+        <label className="block text-sm font-medium text-charcoal">
+          {content.emailLabel}
+          <input className={fieldClasses} name="email" type="email" autoComplete="email" required />
+        </label>
+      </div>
+
+      <label aria-hidden="true" className="absolute -left-[9999px] top-auto h-px w-px overflow-hidden">
+        Website
+        <input name="_honey" type="text" tabIndex={-1} autoComplete="off" />
+      </label>
+
+      <div className="mt-6 grid gap-6 md:grid-cols-2">
+        <label className="block text-sm font-medium text-charcoal">
+          {content.roleLabel}
+          <span className="relative block">
+            <select className={`${fieldClasses} appearance-none pr-12`} name="role" defaultValue="participant" required>
+              {content.roleOptions.map((option) => (
+                <option key={option.value} value={option.value}>{option.label}</option>
+              ))}
+            </select>
+            <svg aria-hidden="true" className="pointer-events-none absolute right-4 top-1/2 mt-1 size-4 -translate-y-1/2 text-earth" viewBox="0 0 20 20" fill="none">
+              <path d="m5 7.5 5 5 5-5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </span>
+        </label>
+        <label className="block text-sm font-medium text-charcoal">
+          {content.municipalityLabel}
+          <input className={fieldClasses} name="municipality" type="text" />
+        </label>
+      </div>
+
+      <label className="mt-6 block text-sm font-medium text-charcoal">
+        {content.messageLabel}
+        <textarea className={`${fieldClasses} min-h-40 resize-y`} name="message" required />
+      </label>
+
+      <p className="mt-4 text-sm leading-7 text-earth">{content.placeholderNote}</p>
+      <p aria-live="polite" className={`mt-4 text-sm leading-7 ${status === 'error' ? 'text-[#a6472f]' : 'text-earth'} ${status === 'idle' ? 'hidden' : 'block'}`}>
+        {status === 'sending'
+          ? content.sendingLabel
+          : status === 'success'
+            ? content.successMessage
+            : content.errorMessage}
+      </p>
+      <button type="submit" disabled={status === 'sending'} className="mt-8 inline-flex rounded-full bg-green px-6 py-4 text-sm font-semibold text-cream transition hover:bg-green-light">
+        {status === 'sending' ? content.sendingLabel : content.submitLabel}
+      </button>
+    </form>
+  )
+}
