@@ -41,6 +41,7 @@ const eu: SiteContent = {
     participateLabel: 'Parte hartu',
   },
   hero: {
+    status: 'PROIEKTUA ERAIKITZEN · SORRERA-FASEA',
     eyebrow: 'LURRALDEARI ERROTUTA · ETORKIZUNARI IREKITA',
     title: 'PAIDEIA',
     subtitle: 'Herri txiki batean, komunitatean ikasi, lan egin eta bizi.',

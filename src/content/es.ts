@@ -41,6 +41,7 @@ const es: SiteContent = {
     participateLabel: 'Quiero participar',
   },
   hero: {
+    status: 'PROYECTO EN CONSTRUCCIÓN · FASE FUNDACIONAL',
     eyebrow: 'ARRAIGADOS AL TERRITORIO · ABIERTOS AL FUTURO',
     title: 'PAIDEIA',
     subtitle: 'Aprender, trabajar y vivir en comunidad en un pueblo pequeño.',

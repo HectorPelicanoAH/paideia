@@ -1,5 +1,6 @@
 import { useEffect, useState, type FormEvent } from 'react'
 import type { LanguageCode } from '../content/index.ts'
+import { imageAlt, type EditorialImageKey } from '../content/imageAlt.ts'
 import { pageSlugs, siteNavigation } from '../content/siteNavigation.ts'
 import { interiorContent } from './content/index.ts'
 import type { InteriorSection, PageSlug } from './types.ts'
@@ -8,6 +9,12 @@ import './interior.css'
 
 const SITE = 'https://hectorpelicanoah.github.io/paideia'
 const languageCodes: LanguageCode[] = ['es', 'ca', 'eu', 'gl']
+const pageImages: Partial<Record<PageSlug, { image: EditorialImageKey; src: string; width: number; height: number; position?: string }>> = {
+  proyecto: { image: 'learning', src: '/paideia/images/aprender-haciendo.webp', width: 1448, height: 1086, position: 'center 58%' },
+  territorio: { image: 'territory', src: '/paideia/images/territorio.webp', width: 1823, height: 863 },
+  'como-empezar': { image: 'pilot', src: '/paideia/images/proyecto-piloto.webp', width: 1448, height: 1086, position: 'center 58%' },
+  participa: { image: 'participate', src: '/paideia/images/participacion.webp', width: 1536, height: 1024 },
+}
 
 function readSlug(): PageSlug {
   const segment = window.location.pathname.split('/').filter(Boolean).at(-1)
@@ -125,6 +132,7 @@ export default function InteriorApp() {
   const { language } = useInteriorLanguage()
   const localized = interiorContent[language]
   const page = localized.pages[slug]
+  const pageImage = pageImages[slug]
   useEffect(() => updateMetadata(slug, page.title, page.description, language), [language, page, slug])
   return <div className="interior-shell">
     <a className="interior-skip" href="#interior-main">{localized.ui.contents}</a>
@@ -135,6 +143,7 @@ export default function InteriorApp() {
         <h1>{page.title}</h1><p className="interior-intro">{page.intro}</p>
         {page.status ? <p className="interior-status">{page.status}</p> : null}
       </section>
+      {pageImage ? <figure className="interior-feature-image"><img src={pageImage.src} alt={imageAlt[language][pageImage.image]} width={pageImage.width} height={pageImage.height} loading="lazy" decoding="async" style={{ objectPosition: pageImage.position }} /></figure> : null}
       <div className="interior-layout">
         <div className="interior-content">
           {slug === 'origen' ? <figure className="interior-profile"><img src="/paideia/images/hector-huerto.jpg" alt={localized.ui.photoAlt} width="750" height="1200" loading="eager" /><figcaption>Héctor · L’Argentera</figcaption></figure> : null}

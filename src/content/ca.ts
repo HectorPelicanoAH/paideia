@@ -41,6 +41,7 @@ const ca: SiteContent = {
     participateLabel: 'Formar-ne part',
   },
   hero: {
+    status: 'PROJECTE EN CONSTRUCCIÓ · FASE FUNDACIONAL',
     eyebrow: 'ARRELATS AL TERRITORI · OBERTS AL FUTUR',
     title: 'PAIDEIA',
     subtitle: 'Aprendre, treballar i viure en comunitat en un poble petit.',
